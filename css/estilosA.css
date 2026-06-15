@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
     background-color: #0B1120;
     color: #F1F5F9;
     line-height: 1.6;
@@ -23,10 +23,16 @@ body {
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 2.5rem;
-    background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+    background: linear-gradient(135deg, #F1F5F9, #3B82F6);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #94A3B8;
+    margin-bottom: 3rem;
 }
 
 /* Header */
@@ -37,7 +43,7 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 }
 
 .navbar {
@@ -50,7 +56,7 @@ body {
 }
 
 .logo h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: white;
 }
 .logo span {
@@ -87,7 +93,7 @@ body {
 /* Hero */
 .hero {
     background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +122,7 @@ body {
 }
 .cta-button:hover {
     background: #2563EB;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 /* About */
@@ -150,7 +156,7 @@ body {
     color: #3B82F6;
 }
 
-/* Sección Planes */
+/* Planes */
 .planes {
     padding: 5rem 0;
     background: #0B1120;
@@ -167,60 +173,65 @@ body {
     padding: 2rem;
     border: 1px solid #334155;
     transition: transform 0.2s;
-    text-align: center;
+    position: relative;
 }
 .plan-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     border-color: #3B82F6;
 }
+.plan-popular {
+    border-top: 3px solid #3B82F6;
+}
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #3B82F6;
+    padding: 0.2rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
 .plan-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #3B82F6;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
 }
 .plan-card .precio {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #10B981;
     margin: 1rem 0;
 }
-.plan-card .precio small {
-    font-size: 0.9rem;
-    color: #94A3B8;
-}
 .plan-card ul {
-    text-align: left;
     margin: 1.5rem 0;
-    padding-left: 1.2rem;
+    padding-left: 1rem;
 }
 .plan-card li {
-    margin: 0.8rem 0;
+    margin: 0.5rem 0;
 }
 .btn-plan {
     background: #3B82F6;
-    color: white;
     border: none;
-    padding: 0.7rem 1.5rem;
+    width: 100%;
+    padding: 0.7rem;
     border-radius: 2rem;
+    color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
-    width: 100%;
 }
 .btn-plan:hover {
     background: #2563EB;
 }
-
 .apps-pricing {
     background: #0F172A;
-    padding: 2rem;
     border-radius: 1.5rem;
+    padding: 2rem;
     text-align: center;
-    margin-top: 2rem;
 }
 .apps-pricing h3 {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 .app-options {
     display: flex;
@@ -246,10 +257,16 @@ body {
     color: #10B981;
     margin: 1rem 0;
 }
+.aviso {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #94A3B8;
+}
 
 /* Servicios */
 .services {
     padding: 5rem 0;
+    background: #0F172A;
 }
 .service-category {
     margin-bottom: 4rem;
@@ -296,8 +313,8 @@ body {
 
 /* Demo carrito */
 .demo-carrito {
-    background: #0F172A;
-    padding: 3rem 0;
+    background: #0B1120;
+    padding: 5rem 0;
 }
 .demo-box {
     background: #1E293B;
@@ -339,11 +356,19 @@ body {
     cursor: pointer;
     color: white;
 }
+select {
+    background: #1E293B;
+    color: white;
+    border: 1px solid #334155;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
 
 /* Marketing Argentina */
 .marketing-arg {
-    padding: 4rem 0;
-    background: #0B1120;
+    padding: 5rem 0;
+    background: #0F172A;
 }
 .marketing-grid {
     display: grid;
@@ -371,7 +396,7 @@ body {
     padding-left: 1.2rem;
 }
 .paquetes {
-    background: #0F172A;
+    background: #0B1120;
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -387,22 +412,17 @@ body {
     padding: 1rem;
     border-radius: 1rem;
 }
-.precio {
+.plan-simple .precio {
     display: block;
     font-size: 1.6rem;
     font-weight: bold;
     color: #10B981;
     margin-top: 0.5rem;
 }
-.aviso {
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    color: #94A3B8;
-}
 
-/* Referencias */
+/* Referencias / Testimonios */
 .references {
-    background: #0F172A;
+    background: #0B1120;
     padding: 5rem 0;
 }
 .testimonials-grid {
@@ -414,15 +434,17 @@ body {
     background: #1E293B;
     padding: 1.5rem;
     border-radius: 1rem;
+    border: 1px solid #334155;
 }
 .testimonial-header {
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 .testimonial-header img {
     width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 .stars {
@@ -433,6 +455,7 @@ body {
 /* Contacto */
 .contact {
     padding: 5rem 0;
+    background: #0F172A;
 }
 .contact-content {
     display: grid;
@@ -443,13 +466,22 @@ body {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
+.contact-details {
+    margin-top: 2rem;
+}
 .contact-item {
     display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
     align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
-.contact-form input, .contact-form select, .contact-form textarea {
+.contact-item i {
+    font-size: 1.5rem;
+    color: #3B82F6;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
@@ -457,6 +489,11 @@ body {
     border: 1px solid #334155;
     border-radius: 0.8rem;
     color: white;
+    font-family: inherit;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94A3B8;
 }
 .submit-btn {
     background: #3B82F6;
@@ -466,6 +503,10 @@ body {
     border-radius: 2rem;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.2s;
+}
+.submit-btn:hover {
+    background: #2563EB;
 }
 
 /* Footer */
@@ -478,15 +519,29 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-section h4 {
+    margin-bottom: 1rem;
+}
+.footer-section ul {
+    list-style: none;
+}
+.footer-section ul li a {
+    color: #CBD5E1;
+    text-decoration: none;
+}
+.footer-section ul li a:hover {
+    color: #3B82F6;
 }
 .social-links a {
     color: white;
     font-size: 1.5rem;
     margin-right: 1rem;
+    display: inline-block;
 }
 .footer-bottom {
     text-align: center;
-    margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid #1E293B;
 }
@@ -507,6 +562,7 @@ body {
     font-size: 2rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     transition: 0.2s;
+    z-index: 100;
 }
 .whatsapp-float:hover {
     transform: scale(1.1);
@@ -528,6 +584,7 @@ body {
         transition: 0.3s;
         padding: 2rem 0;
         border-top: 1px solid #1E293B;
+        gap: 1.5rem;
     }
     .nav-menu.active {
         left: 0;

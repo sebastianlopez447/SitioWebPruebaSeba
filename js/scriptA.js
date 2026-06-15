@@ -2,12 +2,13 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
-// Cerrar menú al hacer click en un enlace
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -33,43 +34,36 @@ function initCarritoDemo() {
         const lista = document.getElementById('lista-carrito');
         const totalSpan = document.getElementById('total-carrito');
         let total = 0;
-        if (lista) {
-            lista.innerHTML = '';
-            carrito.forEach((item, idx) => {
-                total += item.precio * item.cantidad;
-                const li = document.createElement('li');
-                li.innerHTML = `${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad} 
-                    <button class="eliminar-item" data-idx="${idx}" style="background:#f97316; border:none; color:white; border-radius:1rem; padding:2px 8px;">X</button>`;
-                lista.appendChild(li);
-            });
-        }
+        if (lista) lista.innerHTML = '';
+        
+        carrito.forEach((item, idx) => {
+            total += item.precio * item.cantidad;
+            const li = document.createElement('li');
+            li.innerHTML = `${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad} 
+                <button class="eliminar-item" data-idx="${idx}" style="background:#f97316; border:none; color:white; border-radius:1rem; padding:2px 8px; margin-left:8px;">X</button>`;
+            if (lista) lista.appendChild(li);
+        });
+        
         if (totalSpan) totalSpan.innerText = `Total: $${total}`;
         recalcularConEnvio(total);
 
-        // Eventos para botones eliminar
         document.querySelectorAll('.eliminar-item').forEach(btn => {
-            btn.removeEventListener('click', handleEliminar);
-            btn.addEventListener('click', handleEliminar);
-        });
-    }
-
-    function handleEliminar(e) {
-        const btn = e.currentTarget;
-        const idx = btn.getAttribute('data-idx');
-        if (idx !== null) {
-            const itemRemovido = carrito[parseInt(idx)];
-            const productoDiv = document.querySelector(`.producto-item[data-id="${itemRemovido.id}"]`);
-            if (productoDiv) {
-                let stockSpan = productoDiv.querySelector('.stock-display');
-                if (stockSpan) {
-                    stockSpan.innerText = parseInt(stockSpan.innerText) + itemRemovido.cantidad;
+            btn.addEventListener('click', (e) => {
+                const idx = btn.getAttribute('data-idx');
+                const itemRemovido = carrito[parseInt(idx)];
+                const productoDiv = document.querySelector(`.producto-item[data-id="${itemRemovido.id}"]`);
+                if (productoDiv) {
+                    let stockSpan = productoDiv.querySelector('.stock-display');
+                    if (stockSpan) {
+                        stockSpan.innerText = parseInt(stockSpan.innerText) + itemRemovido.cantidad;
+                    }
+                    const btnAgregar = productoDiv.querySelector('.btn-agregar');
+                    if (btnAgregar) btnAgregar.disabled = false;
                 }
-                const btnAgregar = productoDiv.querySelector('.btn-agregar');
-                if (btnAgregar) btnAgregar.disabled = false;
-            }
-            carrito.splice(parseInt(idx), 1);
-            actualizarUI();
-        }
+                carrito.splice(parseInt(idx), 1);
+                actualizarUI();
+            });
+        });
     }
 
     function recalcularConEnvio(subtotal) {
@@ -111,37 +105,29 @@ function initCarritoDemo() {
         actualizarUI();
     }
 
-    // Asignar eventos a botones "Agregar"
     document.querySelectorAll('.btn-agregar').forEach(btn => {
-        btn.removeEventListener('click', () => {});
         btn.addEventListener('click', () => agregarAlCarrito(btn));
     });
 
-    // Vaciar carrito
     const vaciarBtn = document.getElementById('vaciar-carrito');
     if (vaciarBtn) {
-        vaciarBtn.removeEventListener('click', vaciarCarrito);
-        vaciarBtn.addEventListener('click', vaciarCarrito);
-    }
-    
-    function vaciarCarrito() {
-        // Restaurar stocks
-        carrito.forEach(item => {
-            const productoDiv = document.querySelector(`.producto-item[data-id="${item.id}"]`);
-            if (productoDiv) {
-                let stockSpan = productoDiv.querySelector('.stock-display');
-                if (stockSpan) {
-                    stockSpan.innerText = parseInt(stockSpan.innerText) + item.cantidad;
+        vaciarBtn.addEventListener('click', () => {
+            carrito.forEach(item => {
+                const productoDiv = document.querySelector(`.producto-item[data-id="${item.id}"]`);
+                if (productoDiv) {
+                    let stockSpan = productoDiv.querySelector('.stock-display');
+                    if (stockSpan) {
+                        stockSpan.innerText = parseInt(stockSpan.innerText) + item.cantidad;
+                    }
+                    const btn = productoDiv.querySelector('.btn-agregar');
+                    if (btn) btn.disabled = false;
                 }
-                const btn = productoDiv.querySelector('.btn-agregar');
-                if (btn) btn.disabled = false;
-            }
+            });
+            carrito = [];
+            actualizarUI();
         });
-        carrito = [];
-        actualizarUI();
     }
 
-    // Recalcular al cambiar tipo de envío
     const envioSelect = document.getElementById('tipo-envio');
     if (envioSelect) {
         envioSelect.addEventListener('change', () => {
@@ -153,7 +139,4 @@ function initCarritoDemo() {
     actualizarUI();
 }
 
-// Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-    initCarritoDemo();
-});
+document.addEventListener('DOMContentLoaded', initCarritoDemo);
