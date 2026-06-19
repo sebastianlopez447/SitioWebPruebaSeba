@@ -2,10 +2,12 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
@@ -16,13 +18,15 @@ document.querySelectorAll('.nav-link').forEach(link => {
 
 // Formulario de contacto
 const form = document.getElementById('contactForm');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Gracias por contactarnos. Te responderemos a la brevedad.');
-    form.reset();
-});
+if (form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Gracias por contactarnos. Te responderemos a la brevedad.');
+        form.reset();
+    });
+}
 
-// ========== DEMO DE CARRITO ==========
+// ========== DEMO DE CARRITO CON STOCK Y MERCADO ENVÍOS ==========
 function initCarritoDemo() {
     let carrito = [];
 
@@ -30,15 +34,17 @@ function initCarritoDemo() {
         const lista = document.getElementById('lista-carrito');
         const totalSpan = document.getElementById('total-carrito');
         let total = 0;
-        lista.innerHTML = '';
+        if (lista) lista.innerHTML = '';
+        
         carrito.forEach((item, idx) => {
             total += item.precio * item.cantidad;
             const li = document.createElement('li');
             li.innerHTML = `${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad} 
-                <button class="eliminar-item" data-idx="${idx}" style="background:#f97316; border:none; color:white; border-radius:1rem; padding:2px 8px;">X</button>`;
-            lista.appendChild(li);
+                <button class="eliminar-item" data-idx="${idx}" style="background:#f97316; border:none; color:white; border-radius:1rem; padding:2px 8px; margin-left:8px;">X</button>`;
+            if (lista) lista.appendChild(li);
         });
-        totalSpan.innerText = `Total: $${total}`;
+        
+        if (totalSpan) totalSpan.innerText = `Total: $${total}`;
         recalcularConEnvio(total);
 
         document.querySelectorAll('.eliminar-item').forEach(btn => {
@@ -48,7 +54,9 @@ function initCarritoDemo() {
                 const productoDiv = document.querySelector(`.producto-item[data-id="${itemRemovido.id}"]`);
                 if (productoDiv) {
                     let stockSpan = productoDiv.querySelector('.stock-display');
-                    stockSpan.innerText = parseInt(stockSpan.innerText) + itemRemovido.cantidad;
+                    if (stockSpan) {
+                        stockSpan.innerText = parseInt(stockSpan.innerText) + itemRemovido.cantidad;
+                    }
                     const btnAgregar = productoDiv.querySelector('.btn-agregar');
                     if (btnAgregar) btnAgregar.disabled = false;
                 }
@@ -60,59 +68,75 @@ function initCarritoDemo() {
 
     function recalcularConEnvio(subtotal) {
         const envioSelect = document.getElementById('tipo-envio');
-        if (envioSelect) {
+        const totalConEnvioSpan = document.getElementById('total-con-envio');
+        if (envioSelect && totalConEnvioSpan) {
             let costo = parseInt(envioSelect.value);
-            document.getElementById('total-con-envio').innerText = `Total con envío: $${subtotal + costo}`;
+            totalConEnvioSpan.innerText = `Total con envío: $${subtotal + costo}`;
         }
     }
 
-    window.agregarAlCarrito = function(boton) {
+    function agregarAlCarrito(boton) {
         const productoDiv = boton.closest('.producto-item');
+        if (!productoDiv) return;
+        
         const id = productoDiv.getAttribute('data-id');
         const nombre = productoDiv.getAttribute('data-nombre');
         const precio = parseInt(productoDiv.getAttribute('data-precio'));
         const stockSpan = productoDiv.querySelector('.stock-display');
+        if (!stockSpan) return;
+        
         let stockActual = parseInt(stockSpan.innerText);
         if (stockActual <= 0) {
-            alert('Sin stock');
+            alert('Sin stock disponible');
             return;
         }
+        
         const existente = carrito.find(item => item.id === id);
         if (existente) {
             existente.cantidad++;
         } else {
             carrito.push({ id, nombre, precio, cantidad: 1 });
         }
+        
         stockSpan.innerText = stockActual - 1;
-        if (stockSpan.innerText == 0) boton.disabled = true;
+        if (stockSpan.innerText == 0) {
+            boton.disabled = true;
+        }
         actualizarUI();
-    };
+    }
 
     document.querySelectorAll('.btn-agregar').forEach(btn => {
-        btn.removeEventListener('click', () => {});
-        btn.addEventListener('click', () => window.agregarAlCarrito(btn));
+        btn.addEventListener('click', () => agregarAlCarrito(btn));
     });
 
-    document.getElementById('vaciar-carrito').addEventListener('click', () => {
-        carrito.forEach(item => {
-            const productoDiv = document.querySelector(`.producto-item[data-id="${item.id}"]`);
-            if (productoDiv) {
-                let stockSpan = productoDiv.querySelector('.stock-display');
-                stockSpan.innerText = parseInt(stockSpan.innerText) + item.cantidad;
-                const btn = productoDiv.querySelector('.btn-agregar');
-                if (btn) btn.disabled = false;
-            }
+    const vaciarBtn = document.getElementById('vaciar-carrito');
+    if (vaciarBtn) {
+        vaciarBtn.addEventListener('click', () => {
+            carrito.forEach(item => {
+                const productoDiv = document.querySelector(`.producto-item[data-id="${item.id}"]`);
+                if (productoDiv) {
+                    let stockSpan = productoDiv.querySelector('.stock-display');
+                    if (stockSpan) {
+                        stockSpan.innerText = parseInt(stockSpan.innerText) + item.cantidad;
+                    }
+                    const btn = productoDiv.querySelector('.btn-agregar');
+                    if (btn) btn.disabled = false;
+                }
+            });
+            carrito = [];
+            actualizarUI();
         });
-        carrito = [];
-        actualizarUI();
-    });
+    }
 
     const envioSelect = document.getElementById('tipo-envio');
-    if (envioSelect) envioSelect.addEventListener('change', () => {
-        let total = carrito.reduce((acc, i) => acc + i.precio * i.cantidad, 0);
-        recalcularConEnvio(total);
-    });
+    if (envioSelect) {
+        envioSelect.addEventListener('change', () => {
+            let total = carrito.reduce((acc, i) => acc + i.precio * i.cantidad, 0);
+            recalcularConEnvio(total);
+        });
+    }
+
     actualizarUI();
 }
 
-window.addEventListener('DOMContentLoaded', initCarritoDemo);
+document.addEventListener('DOMContentLoaded', initCarritoDemo);

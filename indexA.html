@@ -4,12 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>TechSoluciones | Webs, Apps y Marketing para comercios</title>
-    <link rel="stylesheet" href="css/stilos.css">
+    <title>TechSoluciones | Desarrollo Web, Apps y Marketing Digital</title>
+    <link rel="stylesheet" href="css/estilosA.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos adicionales para la nueva sección de Estrategias */
+        
+        .estrategias {
+            padding: 5rem 0;
+            background: #0B1120;
+        }
+        
+        .estrategias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .estrategia-card {
+            background: #1E293B;
+            border-radius: 1rem;
+            padding: 1.8rem;
+            border: 1px solid #334155;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+        
+        .estrategia-card:hover {
+            transform: translateY(-5px);
+            border-color: #F59E0B;
+        }
+        
+        .estrategia-card i {
+            font-size: 2.5rem;
+            color: #F59E0B;
+            margin-bottom: 1rem;
+        }
+        
+        .estrategia-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #F1F5F9;
+        }
+        
+        .estrategia-card p {
+            color: #CBD5E1;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-estrategia {
+            background: transparent;
+            border: 1px solid #F59E0B;
+            color: #F59E0B;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: 500;
+        }
+        
+        .btn-estrategia:hover {
+            background: #F59E0B;
+            color: #0B1120;
+        }
+        
+        @media (max-width: 768px) {
+            .estrategias-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="logo">
@@ -18,10 +87,12 @@
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
-                <li><a href="#planes" class="nav-link">Planes y Precios</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#planes" class="nav-link">Planes</a></li>
+                <li><a href="#estrategias" class="nav-link">Estrategias</a></li>
                 <li><a href="#demo-carrito" class="nav-link">Demo Carrito</a></li>
                 <li><a href="#marketing-arg" class="nav-link">Marketing ARG</a></li>
+                <li><a href="#referencias" class="nav-link">Referencias</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -32,6 +103,7 @@
         </nav>
     </header>
 
+    <!-- Inicio -->
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>Transformamos tus Ideas en Soluciones Digitales</h1>
@@ -40,6 +112,7 @@
         </div>
     </section>
 
+    <!-- Quiénes Somos -->
     <section id="quienes-somos" class="about">
         <div class="container">
             <h2 class="section-title">Quiénes Somos</h2>
@@ -76,86 +149,18 @@
         </div>
     </section>
 
-    <section id="planes" class="planes">
-        <div class="container">
-            <h2 class="section-title">📊 Planes para tu negocio</h2>
-
-            <h3 style="text-align:center; margin-bottom:2rem;">🌐 Planes de página web para comerciantes</h3>
-            <div class="planes-grid">
-                <div class="plan-card">
-                    <h3>Plan Básico</h3>
-                    <div class="precio">$45.000 <small>+ IVA</small></div>
-                    <p>Pago único o financiado</p>
-                    <ul>
-                        <li>✅ Sitio web responsive (hasta 5 páginas)</li>
-                        <li>✅ Formulario de contacto</li>
-                        <li>✅ Galería de productos/servicios</li>
-                        <li>✅ Integración con WhatsApp</li>
-                        <li>✅ 1 año de hosting + dominio .com.ar</li>
-                    </ul>
-                    <button class="btn-plan" onclick="alert('Solicitá este plan por WhatsApp')">Lo quiero</button>
-                </div>
-                <div class="plan-card">
-                    <h3>Plan E-commerce</h3>
-                    <div class="precio">$120.000 <small>+ IVA</small></div>
-                    <p>Pago único o en 3 cuotas</p>
-                    <ul>
-                        <li>✅ Tienda online completa</li>
-                        <li>✅ Gestión de stock y productos</li>
-                        <li>✅ Carrito de compras</li>
-                        <li>✅ Mercado Pago / Transferencias</li>
-                        <li>✅ Integración con Mercado Envíos</li>
-                        <li>✅ Panel de administración</li>
-                    </ul>
-                    <button class="btn-plan" onclick="alert('Solicitá este plan por WhatsApp')">Lo quiero</button>
-                </div>
-                <div class="plan-card">
-                    <h3>Plan Mayorista</h3>
-                    <div class="precio">$210.000 <small>+ IVA</small></div>
-                    <p>Pago único o consultar financiación</p>
-                    <ul>
-                        <li>✅ Todo lo del plan E-commerce</li>
-                        <li>✅ Precios por niveles (minorista/mayorista)</li>
-                        <li>✅ Sistema de pedidos por volumen</li>
-                        <li>✅ Facturación automática</li>
-                        <li>✅ Módulo de reportes avanzados</li>
-                    </ul>
-                    <button class="btn-plan" onclick="alert('Solicitá este plan por WhatsApp')">Lo quiero</button>
-                </div>
-            </div>
-
-            <div class="apps-pricing">
-                <h3>📱 Aplicaciones web y móviles</h3>
-                <p>Elegí la opción que mejor se adapte a tu negocio</p>
-                <div class="app-options">
-                    <div class="app-option">
-                        <h4>Compra única</h4>
-                        <div class="app-price">Desde $350.000</div>
-                        <p>Aplicación a medida, código fuente propio, sin cuotas mensuales obligatorias (solo hosting y soporte opcional).</p>
-                        <button class="btn-plan" style="margin-top:1rem;" onclick="alert('Consultar por desarrollo a medida')">Consultar</button>
-                    </div>
-                    <div class="app-option">
-                        <h4>Alquiler mensual</h4>
-                        <div class="app-price">Desde $25.000/mes</div>
-                        <p>Ideal para empezar sin gran inversión inicial. Incluye mantenimiento, actualizaciones y soporte técnico.</p>
-                        <button class="btn-plan" style="margin-top:1rem;" onclick="alert('Consultar por plan de alquiler')">Consultar</button>
-                    </div>
-                </div>
-                <p class="aviso">*Los precios son referenciales para Argentina. Cada proyecto se cotiza según requerimientos específicos.</p>
-            </div>
-        </div>
-    </section>
-
+    <!-- Servicios -->
     <section id="servicios" class="services">
         <div class="container">
             <h2 class="section-title">Nuestros Servicios</h2>
+            <!-- Desarrollo Web -->
             <div class="service-category">
                 <h3><i class="fas fa-code"></i> Desarrollo Web</h3>
                 <div class="service-grid">
                     <div class="service-card">
                         <i class="fas fa-laptop-code"></i>
                         <h4>Sitios Web Corporativos</h4>
-                        <p>Diseño profesional, responsive y optimizado para SEO.</p>
+                        <p>Diseño y desarrollo de sitios web profesionales que reflejan la identidad de tu marca.</p>
                         <ul>
                             <li>Diseño responsive</li>
                             <li>Optimización SEO</li>
@@ -165,28 +170,29 @@
                     </div>
                     <div class="service-card">
                         <i class="fas fa-shopping-cart"></i>
-                        <h4>E-commerce con Stock y Mercado Envíos</h4>
-                        <p>Tienda online completa con gestión de inventario, carrito de compras y envíos integrados.</p>
+                        <h4>E-commerce</h4>
+                        <p>Tiendas online completas con carrito de compras, pasarelas de pago y gestión de inventario.</p>
                         <ul>
                             <li>Carrito de compras</li>
-                            <li>Mercado Pago / Transferencias</li>
-                            <li>Control de stock</li>
-                            <li>Mercado Envíos listo</li>
+                            <li>Múltiples métodos de pago</li>
+                            <li>Gestión de productos</li>
+                            <li>Reportes de ventas</li>
                         </ul>
                     </div>
                     <div class="service-card">
                         <i class="fas fa-cogs"></i>
-                        <h4>Aplicaciones Web a medida</h4>
-                        <p>Sistemas personalizados para mayoristas, minoristas y emprendedores.</p>
+                        <h4>Aplicaciones Web</h4>
+                        <p>Sistemas web personalizados que automatizan procesos y mejoran la eficiencia de tu negocio.</p>
                         <ul>
-                            <li>Gestión de pedidos</li>
-                            <li>API REST</li>
-                            <li>Panel de control</li>
+                            <li>Desarrollo a medida</li>
+                            <li>Bases de datos</li>
+                            <li>APIs REST</li>
                             <li>Escalabilidad</li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <!-- Aplicaciones -->
             <div class="service-category">
                 <h3><i class="fas fa-mobile-alt"></i> Desarrollo de Aplicaciones</h3>
                 <div class="service-grid">
@@ -212,37 +218,41 @@
                     </div>
                 </div>
             </div>
+            <!-- Marketing Digital -->
             <div class="service-category">
                 <h3><i class="fas fa-chart-line"></i> Marketing Digital</h3>
                 <div class="service-grid">
                     <div class="service-card">
                         <i class="fas fa-search"></i>
                         <h4>SEO</h4>
-                        <p>Posicioná tu sitio en Google y atraé clientes.</p>
+                        <p>Optimización para motores de búsqueda que posiciona tu sitio web en los primeros resultados.</p>
                         <ul>
-                            <li>Keywords</li>
-                            <li>SEO On/Off Page</li>
+                            <li>Investigación de keywords</li>
+                            <li>SEO On-Page</li>
+                            <li>Link Building</li>
                             <li>Informes mensuales</li>
                         </ul>
                     </div>
                     <div class="service-card">
                         <i class="fas fa-ad"></i>
                         <h4>Google Ads</h4>
-                        <p>Campañas de búsqueda, display y remarketing.</p>
+                        <p>Campañas publicitarias efectivas que generan tráfico cualificado y aumentan tus conversiones.</p>
                         <ul>
-                            <li>Control de presupuesto</li>
-                            <li>Segmentación local</li>
+                            <li>Search Ads</li>
+                            <li>Display Ads</li>
+                            <li>Remarketing</li>
                             <li>Optimización continua</li>
                         </ul>
                     </div>
                     <div class="service-card">
                         <i class="fas fa-hashtag"></i>
                         <h4>Redes Sociales</h4>
-                        <p>Community manager + pauta en Meta Ads.</p>
+                        <p>Gestión profesional de redes sociales para construir una comunidad comprometida con tu marca.</p>
                         <ul>
-                            <li>Contenido semanal</li>
+                            <li>Creación de contenido</li>
+                            <li>Community management</li>
                             <li>Facebook/Instagram Ads</li>
-                            <li>Analítica</li>
+                            <li>Analítica social</li>
                         </ul>
                     </div>
                 </div>
@@ -250,6 +260,96 @@
         </div>
     </section>
 
+    <!-- Planes -->
+    <section id="planes" class="planes">
+        <div class="container">
+            <h2 class="section-title">📊 Planes para tu negocio</h2>
+            <p class="section-subtitle">Elegí el plan que mejor se adapte a tu comercio. Sin costos ocultos.</p>
+            <div class="planes-grid">
+                <div class="plan-card plan-popular">
+                    <div class="popular-badge">Más elegido</div>
+                    <h3>Plan E-commerce</h3>
+                    <div class="precio">$60.000 <small>/mes + IVA</small></div>
+                    <p>Suscripción mensual</p>
+                    <ul>
+                        <li>✅ Tienda online completa</li>
+                        <li>✅ Gestión de stock y productos</li>
+                        <li>✅ Carrito de compras</li>
+                        <li>✅ Mercado Pago / Transferencias</li>
+                        <li>✅ Integración con Mercado Envíos</li>
+                        <li>✅ Panel de administración</li>
+                    </ul>
+                    <button class="btn-plan" onclick="alert('Solicitá este plan por WhatsApp')">Lo quiero</button>
+                </div>
+                <div class="plan-card">
+                    <h3>Plan Mayorista</h3>
+                    <div class="precio">$210.000 <small>+ IVA</small></div>
+                    <p>Pago único o consultar financiación</p>
+                    <ul>
+                        <li>✅ Todo lo del plan E-commerce</li>
+                        <li>✅ Precios por niveles (minorista/mayorista)</li>
+                        <li>✅ Sistema de pedidos por volumen</li>
+                        <li>✅ Facturación automática</li>
+                        <li>✅ Módulo de reportes avanzados</li>
+                    </ul>
+                    <button class="btn-plan" onclick="alert('Solicitá este plan por WhatsApp')">Lo quiero</button>
+                </div>
+            </div>
+            <div class="apps-pricing">
+                <h3>📱 Aplicaciones web y móviles</h3>
+                <p>Elegí la opción que mejor se adapte a tu negocio</p>
+                <div class="app-options">
+                    <div class="app-option">
+                        <h4>Compra única</h4>
+                        <div class="app-price">Desde $350.000</div>
+                        <p>Aplicación a medida, código fuente propio, sin cuotas mensuales obligatorias (solo hosting y soporte opcional).</p>
+                    </div>
+                    <div class="app-option">
+                        <h4>Alquiler mensual</h4>
+                        <div class="app-price">Desde $45.000/mes</div>
+                        <p>Ideal para empezar sin gran inversión inicial. Incluye mantenimiento, actualizaciones y soporte técnico.</p>
+                    </div>
+                </div>
+                <p class="aviso">*Los precios son referenciales para Argentina. Cada proyecto se cotiza según requerimientos específicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Estrategias 2025 para vender más -->
+    <section id="estrategias" class="estrategias">
+        <div class="container">
+            <h2 class="section-title">🚀 Estrategias 2025 para vender más</h2>
+            <p class="section-subtitle">Implementá las tendencias que ya están usando los comercios que crecen.</p>
+            <div class="estrategias-grid">
+                <div class="estrategia-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>IA para atención al cliente</h3>
+                    <p>Respondé consultas 24/7 con chatbots que aprenden de tus productos. Aumentá conversiones mientras dormís.</p>
+                    <button class="btn-estrategia" onclick="alert('Consultá por integración de IA')">Saber más</button>
+                </div>
+                <div class="estrategia-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Ventas por WhatsApp con catálogo</h3>
+                    <p>Convertí cada chat en una orden. Integramos catálogo, carrito y pagos directamente en WhatsApp.</p>
+                    <button class="btn-estrategia" onclick="alert('Activá ventas por WhatsApp')">Saber más</button>
+                </div>
+                <div class="estrategia-card">
+                    <i class="fas fa-truck-fast"></i>
+                    <h3>Envíos en el día / same day</h3>
+                    <p>Diferenciate en tu zona. Configurá logística rápida y mostrá disponibilidad en tiempo real.</p>
+                    <button class="btn-estrategia" onclick="alert('Optimizá tus envíos')">Saber más</button>
+                </div>
+                <div class="estrategia-card">
+                    <i class="fas fa-cart-shopping"></i>
+                    <h3>Recuperación de carritos abandonados</h3>
+                    <p>Automatizá recordatorios por email o WhatsApp. Recuperá hasta el 30% de las ventas perdidas.</p>
+                    <button class="btn-estrategia" onclick="alert('Recuperá ventas ahora')">Saber más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Carrito -->
     <section id="demo-carrito" class="demo-carrito">
         <div class="container">
             <div class="demo-box">
@@ -273,7 +373,7 @@
                 <h4>📍 Tu carrito</h4>
                 <ul id="lista-carrito"></ul>
                 <div id="total-carrito">Total: $0</div>
-                <div style="margin-top:1rem;">
+                <div style="margin-top: 1rem;">
                     <label>📦 Calcular envío (Mercado Envíos simulado): </label>
                     <select id="tipo-envio">
                         <option value="0">Retiro local (gratis)</option>
@@ -288,6 +388,7 @@
         </div>
     </section>
 
+    <!-- Marketing Argentina -->
     <section id="marketing-arg" class="marketing-arg">
         <div class="container">
             <h2 class="section-title">📢 Marketing Digital para tu negocio en Argentina</h2>
@@ -298,7 +399,7 @@
                     <p>Te ayudamos a atraer tráfico cualificado con campañas de Google Ads y Facebook Ads orientadas a resultados.</p>
                     <ul>
                         <li>Segmentación por zona (CABA, GBA, interior)</li>
-                        <li>Anuncios para feriados y fechas especiales argentinas</li>
+                        <li>Anuncios para feriados</li>
                         <li>Remarketing para carritos abandonados</li>
                     </ul>
                 </div>
@@ -308,7 +409,7 @@
                     <p>Unificamos tu estrategia multicanal. Potenciamos tus publicaciones y mejoramos la conversión.</p>
                     <ul>
                         <li>Optimización de fichas técnicas</li>
-                        <li>Gestión de reseñas y reputación</li>
+                        <li>Gestión de reseñas</li>
                         <li>Integración con stock centralizado</li>
                     </ul>
                 </div>
@@ -318,40 +419,35 @@
                     <p>Aprovechá el canal que más usan los argentinos: WhatsApp Business + Catálogo.</p>
                     <ul>
                         <li>Automatización de respuestas</li>
-                        <li>Campañas de difusión segmentadas</li>
+                        <li>Campañas de difusión</li>
                         <li>Contenido para Instagram y TikTok</li>
                     </ul>
                 </div>
             </div>
             <div class="paquetes">
-                <h3>Planes mensuales de marketing (arrancando desde $45.000/mes)</h3>
+                <h3>Planes mensuales de marketing (desde $45.000/mes)</h3>
                 <div class="plan-simple">
                     <h4>Plan Emprendedor</h4>
-                    <p>Gestión de redes + anuncios básicos en Facebook/Instagram.</p>
-                    <span class="precio">$45.000</span>
-                </div>
+                    <p>Gestión de redes + anuncios básicos</p><span class="precio">$45.000</span></div>
                 <div class="plan-simple">
                     <h4>Plan Negocio Local</h4>
-                    <p>Google Ads + SEO local + 3 publicaciones semanales.</p>
-                    <span class="precio">$85.000</span>
-                </div>
+                    <p>Google Ads + SEO local</p><span class="precio">$85.000</span></div>
                 <div class="plan-simple">
                     <h4>Plan Ecommerce Pro</h4>
-                    <p>Remarketing, campañas multicanal y consultoría mensual.</p>
-                    <span class="precio">$150.000</span>
-                </div>
+                    <p>Remarketing + multicanal</p><span class="precio">$150.000</span></div>
                 <p class="aviso">*Precios orientativos, consultar por proyectos personalizados.</p>
             </div>
         </div>
     </section>
 
+    <!-- Referencias -->
     <section id="referencias" class="references">
         <div class="container">
             <h2 class="section-title">Referencias</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%233B82F6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3EMR%3C/text%3E%3C/svg%3E"
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%233498db'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3EMR%3C/text%3E%3C/svg%3E"
                             alt="María Rodríguez">
                         <div>
                             <h4>María Rodríguez</h4>
@@ -363,7 +459,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%2310B981'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3ECM%3C/text%3E%3C/svg%3E"
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23e74c3c'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3ECM%3C/text%3E%3C/svg%3E"
                             alt="Carlos Mendoza">
                         <div>
                             <h4>Carlos Mendoza</h4>
@@ -375,20 +471,21 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23F59E0B'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3EAG%3C/text%3E%3C/svg%3E"
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%232ecc71'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3EAG%3C/text%3E%3C/svg%3E"
                             alt="Andrea García">
                         <div>
                             <h4>Andrea García</h4>
                             <p>Gerente - Innovatech</p>
                         </div>
                     </div>
-                    <p class="testimonial-text">"La app móvil que desarrollaron fue un éxito. Los usuarios aman la interfaz."</p>
+                    <p class="testimonial-text">"La aplicación móvil que desarrollaron fue un éxito. Los usuarios aman la interfaz."</p>
                     <div class="stars">★★★★★</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contacto -->
     <section id="contacto" class="contact">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
@@ -409,24 +506,23 @@
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
-                    <div class="form-group"><input type="text" id="nombre" placeholder="Nombre completo" required></div>
-                    <div class="form-group"><input type="email" id="email" placeholder="Correo electrónico" required></div>
-                    <div class="form-group"><input type="tel" id="telefono" placeholder="Teléfono"></div>
-                    <div class="form-group">
-                        <select id="servicio">
-                            <option value="">Selecciona un servicio</option>
-                            <option value="web">Desarrollo Web</option>
-                            <option value="app">Aplicaciones</option>
-                            <option value="marketing">Marketing Digital</option>
-                        </select>
-                    </div>
-                    <div class="form-group"><textarea id="mensaje" placeholder="Contanos tu proyecto..." rows="5" required></textarea></div>
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                    <input type="tel" id="telefono" placeholder="Teléfono">
+                    <select id="servicio">
+                        <option value="">Selecciona un servicio</option>
+                        <option value="web">Desarrollo Web</option>
+                        <option value="app">Desarrollo de Aplicaciones</option>
+                        <option value="marketing">Marketing Digital</option>
+                    </select>
+                    <textarea id="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -438,8 +534,9 @@
                     <h4>Enlaces Rápidos</h4>
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#planes">Planes</a></li>
                         <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#planes">Planes</a></li>
+                        <li><a href="#estrategias">Estrategias</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
@@ -449,136 +546,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 TechSoluciones. Todos los derechos reservados.</p>
+                <p>&copy; 2025 TechSoluciones. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <a href="https://wa.me/541123456789" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <script>
-        // Menú hamburguesa
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Formulario de contacto
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Gracias por contactarnos. Te responderemos a la brevedad.');
-            form.reset();
-        });
-
-        // Demo carrito
-        function initCarritoDemo() {
-            let carrito = [];
-
-            function actualizarUI() {
-                const lista = document.getElementById('lista-carrito');
-                const totalSpan = document.getElementById('total-carrito');
-                let total = 0;
-                lista.innerHTML = '';
-                carrito.forEach((item, idx) => {
-                    total += item.precio * item.cantidad;
-                    const li = document.createElement('li');
-                    li.innerHTML = `${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad} 
-                        <button class="eliminar-item" data-idx="${idx}" style="background:#f97316; border:none; color:white; border-radius:1rem; padding:2px 8px;">X</button>`;
-                    lista.appendChild(li);
-                });
-                totalSpan.innerText = `Total: $${total}`;
-                recalcularConEnvio(total);
-
-                document.querySelectorAll('.eliminar-item').forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        const idx = btn.getAttribute('data-idx');
-                        const itemRemovido = carrito[parseInt(idx)];
-                        const productoDiv = document.querySelector(`.producto-item[data-id="${itemRemovido.id}"]`);
-                        if (productoDiv) {
-                            let stockSpan = productoDiv.querySelector('.stock-display');
-                            stockSpan.innerText = parseInt(stockSpan.innerText) + itemRemovido.cantidad;
-                            const btnAgregar = productoDiv.querySelector('.btn-agregar');
-                            if (btnAgregar) btnAgregar.disabled = false;
-                        }
-                        carrito.splice(parseInt(idx), 1);
-                        actualizarUI();
-                    });
-                });
-            }
-
-            function recalcularConEnvio(subtotal) {
-                const envioSelect = document.getElementById('tipo-envio');
-                if (envioSelect) {
-                    let costo = parseInt(envioSelect.value);
-                    document.getElementById('total-con-envio').innerText = `Total con envío: $${subtotal + costo}`;
-                }
-            }
-
-            window.agregarAlCarrito = function(boton) {
-                const productoDiv = boton.closest('.producto-item');
-                const id = productoDiv.getAttribute('data-id');
-                const nombre = productoDiv.getAttribute('data-nombre');
-                const precio = parseInt(productoDiv.getAttribute('data-precio'));
-                const stockSpan = productoDiv.querySelector('.stock-display');
-                let stockActual = parseInt(stockSpan.innerText);
-                if (stockActual <= 0) {
-                    alert('Sin stock');
-                    return;
-                }
-                const existente = carrito.find(item => item.id === id);
-                if (existente) {
-                    existente.cantidad++;
-                } else {
-                    carrito.push({
-                        id,
-                        nombre,
-                        precio,
-                        cantidad: 1
-                    });
-                }
-                stockSpan.innerText = stockActual - 1;
-                if (stockSpan.innerText == 0) boton.disabled = true;
-                actualizarUI();
-            };
-
-            document.querySelectorAll('.btn-agregar').forEach(btn => {
-                btn.removeEventListener('click', () => {});
-                btn.addEventListener('click', () => window.agregarAlCarrito(btn));
-            });
-
-            document.getElementById('vaciar-carrito').addEventListener('click', () => {
-                carrito.forEach(item => {
-                    const productoDiv = document.querySelector(`.producto-item[data-id="${item.id}"]`);
-                    if (productoDiv) {
-                        let stockSpan = productoDiv.querySelector('.stock-display');
-                        stockSpan.innerText = parseInt(stockSpan.innerText) + item.cantidad;
-                        const btn = productoDiv.querySelector('.btn-agregar');
-                        if (btn) btn.disabled = false;
-                    }
-                });
-                carrito = [];
-                actualizarUI();
-            });
-
-            const envioSelect = document.getElementById('tipo-envio');
-            if (envioSelect) envioSelect.addEventListener('change', () => {
-                let total = carrito.reduce((acc, i) => acc + i.precio * i.cantidad, 0);
-                recalcularConEnvio(total);
-            });
-            actualizarUI();
-        }
-
-        window.addEventListener('DOMContentLoaded', initCarritoDemo);
-    </script>
+    <script src="js/scriptA.js"></script>
 </body>
 
 </html>
