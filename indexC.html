@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>TechSoluciones | Tiendas online, Apps y Marketing</title>
+    <link rel="stylesheet" href="css/estilos_C.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Tech<span>Soluciones</span></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#planes" class="nav-link">Planes</a></li>
+                <li><a href="#estrategias" class="nav-link">Estrategias</a></li>
+                <li><a href="#demo-carrito" class="nav-link">Demo Carrito</a></li>
+                <li><a href="#marketing-arg" class="nav-link">Marketing ARG</a></li>
+                <li><a href="#referencias" class="nav-link">Referencias</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- INICIO - HERO -->
+    <section id="inicio" class="hero">
+        <!-- Formas abstractas -->
+        <div class="bg-shapes">
+            <span class="shape shape-1"></span>
+            <span class="shape shape-2"></span>
+            <span class="shape shape-3"></span>
+            <span class="shape shape-4"></span>
+        </div>
+        <!-- Partículas -->
+        <canvas id="particles-canvas"></canvas>
+
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Transformación digital</div>
+            <h1 id="typed-title">Tu tienda online <span class="highlight">sin necesidad</span> de descargar en Play Store</h1>
+            <p>Desarrollos personalizados para tu negocio: tiendas online con stock, envíos y marketing digital para comercios argentinos.</p>
+            <div class="hero-buttons">
+                <a href="#planes" class="cta-button btn-shine">Ver Planes y Precios</a>
+                <a href="#demo-carrito" class="cta-button-secondary">Probar Demo</a>
+            </div>
+            <!-- Indicador de scroll -->
+            <div class="scroll-indicator">
+                <span>Deslizá para ver más</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes-somos" class="about">
+        <div class="container">
+            <h2 class="section-title gradient-move">Quiénes Somos</h2>
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <h3>Nuestra Historia</h3>
+                    <p>Somos un equipo apasionado por la tecnología y la innovación. Desde 2018, ayudamos a empresas y emprendedores a transformar sus ideas en soluciones digitales efectivas.</p>
+                    <h3>Misión</h3>
+                    <p>Brindar soluciones tecnológicas de alta calidad que impulsen el crecimiento de nuestros clientes, combinando creatividad, innovación y las últimas tendencias del mercado digital.</p>
+                    <h3>Visión</h3>
+                    <p>Ser líderes en el desarrollo de soluciones digitales integrales, reconocidos por nuestra excelencia técnica y compromiso con el éxito de nuestros clientes.</p>
+                    <h3>Nuestro Equipo</h3>
+                    <p>Contamos con desarrolladores web, diseñadores UX/UI, especialistas en marketing digital y project managers certificados que trabajan en conjunto para ofrecer resultados excepcionales.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item glass-effect reveal" data-count="5">
+                        <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h4><span class="counter">0</span>+</h4>
+                        <p>Años de Experiencia</p>
+                    </div>
+                    <div class="stat-item glass-effect reveal" data-count="200">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h4><span class="counter">0</span>+</h4>
+                        <p>Proyectos Completados</p>
+                    </div>
+                    <div class="stat-item glass-effect reveal" data-count="50">
+                        <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                        <h4><span class="counter">0</span>+</h4>
+                        <p>Clientes Satisfechos</p>
+                    </div>
+                    <div class="stat-item glass-effect reveal" data-count="15">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <h4><span class="counter">0</span></h4>
+                        <p>Profesionales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title gradient-move">Nuestros Servicios</h2>
+
+            <!-- PWA DESTACADO -->
+            <div class="pwa-destacado glass-effect reveal">
+                <span class="badge-pwa">🚀 Tecnología simple para tu negocio</span>
+                <h3>Tu tienda se convierte en una App</h3>
+                <p>¿Sabías que tu página web puede funcionar como una aplicación en el celular de tus clientes? <strong>Sin que ellos tengan que descargar nada desde Play Store</strong>. Solo escanean un código QR o entran a un enlace, y ¡listo! La página
+                    se instala como una app más en su teléfono.</p>
+
+                <div class="pwa-como-descargar glass-effect">
+                    <h4>📲 ¿Cómo funciona?</h4>
+                    <ol>
+                        <li><strong>Compartís un enlace o un código QR</strong> con tus clientes (lo ponés en el local, en redes sociales o en tus productos).</li>
+                        <li>Cuando lo escanean, el navegador les pregunta: <strong>"¿Querés agregar esta app a tu pantalla de inicio?"</strong>.</li>
+                        <li>Ellos dicen que sí, y <strong>aparece un ícono</strong> como el de WhatsApp o Mercado Libre en su celular.</li>
+                        <li>Cuando lo tocan, <strong>entran directo a tu tienda</strong> como si fuera una app, sin tener que escribir la dirección web cada vez.</li>
+                    </ol>
+                    <p><small>✅ Es como tener una app propia, pero mucho más fácil y sin costos de desarrollo de app nativa.</small></p>
+                </div>
+
+                <button class="btn-plan btn-shine" style="width:auto; padding:0.7rem 2rem; margin-top:0.5rem;" onclick="alert('Consultá por tu App ahora')">Quiero mi App</button>
+            </div>
+
+            <!-- Desarrollo Web -->
+            <div class="service-category">
+                <h3><i class="fas fa-code"></i> Desarrollo Web</h3>
+                <div class="service-grid">
+                    <div class="service-card glass-effect reveal">
+                        <div class="service-icon-wrapper"><i class="fas fa-laptop-code"></i></div>
+                        <h4>Sitios Web para tu negocio</h4>
+                        <p>Diseño y desarrollo de páginas web profesionales que reflejan la identidad de tu marca.</p>
+                        <ul>
+                            <li>Diseño adaptado a celulares</li>
+                            <li>Posicionamiento en Google</li>
+                            <li>Panel para administrar tu contenido</li>
+                            <li>Integración con redes sociales</li>
+                        </ul>
+                        <span class="service-tag">Popular</span>
+                    </div>
+                    <div class="service-card glass-effect reveal" style="transition-delay: 0.1s;">
+                        <div class="service-icon-wrapper"><i class="fas fa-shopping-cart"></i></div>
+                        <h4>Tienda online con stock</h4>
+                        <p>Tu negocio en internet con carrito de compras, métodos de pago y control de inventario.</p>
+                        <ul>
+                            <li>Carrito de compras</li>
+                            <li>Múltiples formas de pago</li>
+                            <li>Gestión de productos</li>
+                            <li>Reportes de ventas</li>
+                        </ul>
+                        <span class="service-tag">Más pedido</span>
+                    </div>
+                    <div class="service-card glass-effect reveal" style="transition-delay: 0.2s;">
+                        <div class="service-icon-wrapper"><i class="fas fa-cogs"></i></div>
+                        <h4>Sistemas a medida</h4>
+                        <p>Soluciones personalizadas para automatizar procesos y mejorar la eficiencia de tu negocio.</p>
+                        <ul>
+                            <li>Desarrollo a medida</li>
+                            <li>Bases de datos</li>
+                            <li>Conexiones con otras herramientas</li>
+                            <li>Escalabilidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aplicaciones Móviles -->
+            <div class="service-category">
+                <h3><i class="fas fa-mobile-alt"></i> Aplicaciones Móviles</h3>
+                <div class="service-grid">
+                    <div class="service-card glass-effect reveal">
+                        <div class="service-icon-wrapper"><i class="fab fa-android"></i></div>
+                        <h4>Apps para Android</h4>
+                        <p>Aplicaciones nativas para celulares con sistema Android. Publicación en Google Play.</p>
+                        <ul>
+                            <li>Diseño moderno</li>
+                            <li>Notificaciones</li>
+                            <li>Rendimiento optimizado</li>
+                        </ul>
+                    </div>
+                    <div class="service-card glass-effect reveal" style="transition-delay: 0.1s;">
+                        <div class="service-icon-wrapper"><i class="fas fa-globe"></i></div>
+                        <h4>Apps para Android y iPhone</h4>
+                        <p>Una sola aplicación que funciona en ambos sistemas. Ideal para llegar a todos.</p>
+                        <ul>
+                            <li>Menor costo</li>
+                            <li>Actualizaciones automáticas</li>
+                            <li>Código único</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing Digital -->
+            <div class="service-category">
+                <h3><i class="fas fa-chart-line"></i> Marketing Digital</h3>
+                <div class="service-grid">
+                    <div class="service-card glass-effect reveal">
+                        <div class="service-icon-wrapper"><i class="fas fa-search"></i></div>
+                        <h4>Posicionamiento en Google</h4>
+                        <p>Hacé que tu sitio aparezca primero cuando tus clientes te busquen.</p>
+                        <ul>
+                            <li>Estudio de palabras clave</li>
+                            <li>Optimización de contenido</li>
+                            <li>Informes mensuales</li>
+                        </ul>
+                    </div>
+                    <div class="service-card glass-effect reveal" style="transition-delay: 0.1s;">
+                        <div class="service-icon-wrapper"><i class="fas fa-ad"></i></div>
+                        <h4>Anuncios en Google</h4>
+                        <p>Publicidad pagada para que tu negocio aparezca en los primeros resultados.</p>
+                        <ul>
+                            <li>Anuncios de búsqueda</li>
+                            <li>Anuncios en sitios web</li>
+                            <li>Recordatorios a clientes que ya te visitaron</li>
+                            <li>Optimización continua</li>
+                        </ul>
+                    </div>
+                    <div class="service-card glass-effect reveal" style="transition-delay: 0.2s;">
+                        <div class="service-icon-wrapper"><i class="fas fa-hashtag"></i></div>
+                        <h4>Redes Sociales</h4>
+                        <p>Gestión profesional de tus redes para construir una comunidad alrededor de tu marca.</p>
+                        <ul>
+                            <li>Creación de contenido</li>
+                            <li>Community management</li>
+                            <li>Anuncios en Facebook e Instagram</li>
+                            <li>Análisis de resultados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANES -->
+    <section id="planes" class="planes">
+        <div class="container">
+            <h2 class="section-title gradient-move">📊 Planes para tu negocio</h2>
+            <p class="section-subtitle">Elegí el plan que mejor se adapte a tu comercio. Sin costos ocultos.</p>
+            <div class="planes-grid">
+                <div class="plan-card plan-popular glass-effect reveal">
+                    <div class="popular-badge">⭐ Más elegido</div>
+                    <h3>Plan E-commerce</h3>
+                    <div class="precio">$60.000 <small>/mes + IVA</small></div>
+                    <p>Suscripción mensual</p>
+                    <ul>
+                        <li>✅ Tienda online completa</li>
+                        <li>✅ Gestión de stock y productos</li>
+                        <li>✅ Carrito de compras</li>
+                        <li>✅ Mercado Pago / Transferencias</li>
+                        <li>✅ Integración con Mercado Envíos</li>
+                        <li>✅ Panel de administración</li>
+                    </ul>
+                    <button class="btn-plan btn-shine" onclick="alert('Solicitá este plan por WhatsApp')">Lo quiero</button>
+                </div>
+                <div class="plan-card glass-effect reveal" style="transition-delay: 0.1s;">
+                    <h3>Plan Mayorista</h3>
+                    <div class="precio">$210.000 <small>+ IVA</small></div>
+                    <p>Pago único o consultar financiación</p>
+                    <ul>
+                        <li>✅ Todo lo del plan E-commerce</li>
+                        <li>✅ Precios por niveles (minorista/mayorista)</li>
+                        <li>✅ Sistema de pedidos por volumen</li>
+                        <li>✅ Facturación automática</li>
+                        <li>✅ Módulo de reportes avanzados</li>
+                    </ul>
+                    <button class="btn-plan btn-shine" onclick="alert('Solicitá este plan por WhatsApp')">Lo quiero</button>
+                </div>
+            </div>
+            <div class="apps-pricing glass-effect reveal">
+                <h3>📱 Aplicaciones web y móviles</h3>
+                <p>Elegí la opción que mejor se adapte a tu negocio</p>
+                <div class="app-options">
+                    <div class="app-option glass-effect">
+                        <h4>Compra única</h4>
+                        <div class="app-price">Desde $350.000</div>
+                        <p>Aplicación a medida, código fuente propio, sin cuotas mensuales obligatorias (solo hosting y soporte opcional).</p>
+                    </div>
+                    <div class="app-option glass-effect">
+                        <h4>Alquiler mensual</h4>
+                        <div class="app-price">Desde $45.000/mes</div>
+                        <p>Ideal para empezar sin gran inversión inicial. Incluye mantenimiento, actualizaciones y soporte técnico.</p>
+                    </div>
+                </div>
+                <p class="aviso">*Los precios son referenciales para Argentina. Cada proyecto se cotiza según requerimientos específicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTRATEGIAS -->
+    <section id="estrategias" class="estrategias">
+        <div class="container">
+            <h2 class="section-title gradient-move">🚀 Estrategias 2025 para vender más</h2>
+            <p class="section-subtitle">Implementá las tendencias que ya están usando los comercios que crecen.</p>
+            <div class="estrategias-grid">
+                <div class="estrategia-card glass-effect reveal">
+                    <div class="estrategia-icon"><i class="fas fa-robot"></i></div>
+                    <h3>IA para atención al cliente</h3>
+                    <p>Respondé consultas 24/7 con chatbots que aprenden de tus productos. Aumentá conversiones mientras dormís.</p>
+                    <button class="btn-estrategia" onclick="alert('Consultá por integración de IA')">Saber más →</button>
+                </div>
+                <div class="estrategia-card glass-effect reveal" style="transition-delay: 0.1s;">
+                    <div class="estrategia-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Ventas por WhatsApp con catálogo</h3>
+                    <p>Convertí cada chat en una orden. Integramos catálogo, carrito y pagos directamente en WhatsApp.</p>
+                    <button class="btn-estrategia" onclick="alert('Activá ventas por WhatsApp')">Saber más →</button>
+                </div>
+                <div class="estrategia-card glass-effect reveal" style="transition-delay: 0.2s;">
+                    <div class="estrategia-icon"><i class="fas fa-truck-fast"></i></div>
+                    <h3>Envíos en el día / same day</h3>
+                    <p>Diferenciate en tu zona. Configurá logística rápida y mostrá disponibilidad en tiempo real.</p>
+                    <button class="btn-estrategia" onclick="alert('Optimizá tus envíos')">Saber más →</button>
+                </div>
+                <div class="estrategia-card glass-effect reveal" style="transition-delay: 0.3s;">
+                    <div class="estrategia-icon"><i class="fas fa-cart-shopping"></i></div>
+                    <h3>Recuperación de carritos abandonados</h3>
+                    <p>Automatizá recordatorios por email o WhatsApp. Recuperá hasta el 30% de las ventas perdidas.</p>
+                    <button class="btn-estrategia" onclick="alert('Recuperá ventas ahora')">Saber más →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEMO CARRITO -->
+    <section id="demo-carrito" class="demo-carrito">
+        <div class="container">
+            <div class="demo-box glass-effect reveal">
+                <h3>🛒 Demo interactiva: Carrito + Stock + Mercado Envíos</h3>
+                <p>Simulador real de cómo funcionará tu tienda online. Probá agregar productos, controlamos el stock y calculamos el envío.</p>
+                <div id="productos-demo">
+                    <div class="producto-item glass-effect" data-id="1" data-nombre="Remera Argentina" data-precio="3500" data-stock="5">
+                        <span>👕 Remera Argentina - $3500 (stock: <span class="stock-display">5</span>)</span>
+                        <button class="btn-agregar">Agregar</button>
+                    </div>
+                    <div class="producto-item glass-effect" data-id="2" data-nombre="Mate Personalizado" data-precio="2800" data-stock="3">
+                        <span>🧉 Mate Personalizado - $2800 (stock: <span class="stock-display">3</span>)</span>
+                        <button class="btn-agregar">Agregar</button>
+                    </div>
+                    <div class="producto-item glass-effect" data-id="3" data-nombre="Alfajores x6" data-precio="1200" data-stock="10">
+                        <span>🍪 Alfajores x6 - $1200 (stock: <span class="stock-display">10</span>)</span>
+                        <button class="btn-agregar">Agregar</button>
+                    </div>
+                </div>
+                <hr>
+                <h4>📍 Tu carrito</h4>
+                <ul id="lista-carrito"></ul>
+                <div id="total-carrito">Total: $0</div>
+                <div style="margin-top: 1rem;">
+                    <label>📦 Calcular envío (Mercado Envíos simulado): </label>
+                    <select id="tipo-envio">
+                        <option value="0">Retiro local (gratis)</option>
+                        <option value="800">CABA y GBA - $800</option>
+                        <option value="1500">Interior - $1500</option>
+                    </select>
+                </div>
+                <div id="total-con-envio">Total con envío: $0</div>
+                <button id="vaciar-carrito">Vaciar carrito</button>
+                <p style="font-size:0.8rem; margin-top:1rem;">✅ Demo frontend – En la versión final se conecta con API de Mercado Envíos y base de datos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKETING ARGENTINA -->
+    <section id="marketing-arg" class="marketing-arg">
+        <div class="container">
+            <h2 class="section-title gradient-move">📢 Marketing Digital para tu negocio en Argentina</h2>
+            <div class="marketing-grid">
+                <div class="marketing-card glass-effect reveal">
+                    <div class="marketing-icon"><i class="fas fa-chart-simple"></i></div>
+                    <h4>¿Tenés tu tienda online pero nadie la visita?</h4>
+                    <p>Te ayudamos a atraer clientes con campañas de Google y Facebook enfocadas en resultados.</p>
+                    <ul>
+                        <li>Segmentación por zona (CABA, GBA, interior)</li>
+                        <li>Anuncios para feriados</li>
+                        <li>Recordatorios para clientes que dejaron el carrito</li>
+                    </ul>
+                </div>
+                <div class="marketing-card glass-effect reveal" style="transition-delay: 0.1s;">
+                    <div class="marketing-icon"><i class="fas fa-store"></i></div>
+                    <h4>Vendé en Mercado Libre y en tu web</h4>
+                    <p>Unificamos tu estrategia en todos los canales. Potenciamos tus publicaciones y mejoramos la conversión.</p>
+                    <ul>
+                        <li>Optimización de fichas técnicas</li>
+                        <li>Gestión de reseñas</li>
+                        <li>Integración con stock centralizado</li>
+                    </ul>
+                </div>
+                <div class="marketing-card glass-effect reveal" style="transition-delay: 0.2s;">
+                    <div class="marketing-icon"><i class="fas fa-whatsapp"></i></div>
+                    <h4>Marketing de WhatsApp y redes</h4>
+                    <p>Aprovechá el canal que más usan los argentinos: WhatsApp Business con catálogo.</p>
+                    <ul>
+                        <li>Automatización de respuestas</li>
+                        <li>Campañas de difusión</li>
+                        <li>Contenido para Instagram y TikTok</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="paquetes glass-effect reveal">
+                <h3>Planes mensuales de marketing (desde $45.000/mes)</h3>
+                <div class="plan-simple">
+                    <h4>Plan Emprendedor</h4>
+                    <p>Gestión de redes + anuncios básicos</p>
+                    <span class="precio">$45.000</span>
+                </div>
+                <div class="plan-simple">
+                    <h4>Plan Negocio Local</h4>
+                    <p>Google Ads + SEO local</p>
+                    <span class="precio">$85.000</span>
+                </div>
+                <div class="plan-simple">
+                    <h4>Plan Ecommerce Pro</h4>
+                    <p>Remarketing + multicanal</p>
+                    <span class="precio">$150.000</span>
+                </div>
+                <p class="aviso">*Precios orientativos, consultar por proyectos personalizados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERENCIAS -->
+    <section id="referencias" class="references">
+        <div class="container">
+            <h2 class="section-title gradient-move">Referencias</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-effect reveal">
+                    <div class="testimonial-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%233498db'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3EMR%3C/text%3E%3C/svg%3E"
+                            alt="María Rodríguez">
+                        <div>
+                            <h4>María Rodríguez</h4>
+                            <p>CEO - TechStart</p>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Excelente trabajo en el desarrollo de nuestra plataforma web. El equipo entendió perfectamente nuestras necesidades."</p>
+                </div>
+                <div class="testimonial-card glass-effect reveal" style="transition-delay: 0.1s;">
+                    <div class="testimonial-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23e74c3c'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3ECM%3C/text%3E%3C/svg%3E"
+                            alt="Carlos Mendoza">
+                        <div>
+                            <h4>Carlos Mendoza</h4>
+                            <p>Director - DigitalPro</p>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"La campaña de marketing digital duplicó nuestras ventas online en 3 meses. Muy profesionales."</p>
+                </div>
+                <div class="testimonial-card glass-effect reveal" style="transition-delay: 0.2s;">
+                    <div class="testimonial-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%232ecc71'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3EAG%3C/text%3E%3C/svg%3E"
+                            alt="Andrea García">
+                        <div>
+                            <h4>Andrea García</h4>
+                            <p>Gerente - Innovatech</p>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"La aplicación móvil que desarrollaron fue un éxito. Los usuarios aman la interfaz."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title gradient-move">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <h3>Contáctanos</h3>
+                    <p>Estamos listos para ayudarte con tu proyecto. Te responderemos en menos de 24 horas.</p>
+                    <div class="contact-details">
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
+                            <p>Av. Tecnológica 123, Buenos Aires, Argentina</p>
+                        </div>
+                        <div class="contact-item"><i class="fas fa-phone"></i>
+                            <p>+54 11 2345-6789</p>
+                        </div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i>
+                            <p>info@techsoluciones.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form glass-effect reveal" id="contactForm">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                    <input type="tel" id="telefono" placeholder="Teléfono">
+                    <select id="servicio">
+                        <option value="">Selecciona un servicio</option>
+                        <option value="web">Desarrollo Web</option>
+                        <option value="app">Desarrollo de Aplicaciones</option>
+                        <option value="pwa">App desde el navegador</option>
+                        <option value="marketing">Marketing Digital</option>
+                    </select>
+                    <textarea id="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    <button type="submit" class="submit-btn btn-shine">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechSoluciones</h4>
+                    <p>Transformamos ideas en soluciones digitales exitosas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#planes">Planes</a></li>
+                        <li><a href="#estrategias">Estrategias</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechSoluciones. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/541123456789" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="js/script_C.js"></script>
+</body>
+
+</html>
