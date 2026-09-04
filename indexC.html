@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>TechSoluciones | Tiendas online, Apps y Marketing</title>
+    <title>LS NEXO DIGITAL | Tiendas online, Apps y Marketing</title>
     <link rel="stylesheet" href="css/estilos_C.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,8 +13,12 @@
     <!-- HEADER -->
     <header class="header">
         <nav class="navbar">
+            <!-- LOGO CON IMAGEN Y TEXTO -->
             <div class="logo">
-                <h1>Tech<span>Soluciones</span></h1>
+                <a href="#inicio" class="logo-link">
+                    <img src="img/logoWeb2.jpg" alt="LS NEXO DIGITAL" class="logo-img">
+                    <span class="logo-text">LS NEXO <span>DIGITAL</span></span>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
@@ -22,7 +26,7 @@
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="#planes" class="nav-link">Planes</a></li>
                 <li><a href="#estrategias" class="nav-link">Estrategias</a></li>
-                <li><a href="#demo-carrito" class="nav-link">Demo Carrito</a></li>
+                <!-- ELIMINADO: Demo Carrito -->
                 <li><a href="#marketing-arg" class="nav-link">Marketing ARG</a></li>
                 <li><a href="#referencias" class="nav-link">Referencias</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
@@ -53,7 +57,7 @@
             <p>Desarrollos personalizados para tu negocio: tiendas online con stock, envíos y marketing digital para comercios argentinos.</p>
             <div class="hero-buttons">
                 <a href="#planes" class="cta-button btn-shine">Ver Planes y Precios</a>
-                <a href="#demo-carrito" class="cta-button-secondary">Probar Demo</a>
+                <a href="#contacto" class="cta-button-secondary">Solicitar Presupuesto</a>
             </div>
             <!-- Indicador de scroll -->
             <div class="scroll-indicator">
@@ -127,7 +131,7 @@
                     <p><small>✅ Es como tener una app propia, pero mucho más fácil y sin costos de desarrollo de app nativa.</small></p>
                 </div>
 
-                <button class="btn-plan btn-shine" style="width:auto; padding:0.7rem 2rem; margin-top:0.5rem;" onclick="alert('Consultá por tu App ahora')">Quiero mi App</button>
+                <button class="btn-plan btn-shine" style="width:auto; padding:0.7rem 2rem; margin-top:0.5rem;" onclick="window.location.href='#contacto'">Quiero mi App</button>
             </div>
 
             <!-- Desarrollo Web -->
@@ -249,7 +253,7 @@
                 <div class="plan-card plan-popular glass-effect reveal">
                     <div class="popular-badge">⭐ Más elegido</div>
                     <h3>Plan E-commerce</h3>
-                    <div class="precio">$60.000 <small>/mes + IVA</small></div>
+                    <div class="precio">Consultar <small>/mes </small></div>
                     <p>Suscripción mensual</p>
                     <ul>
                         <li>✅ Tienda online completa</li>
@@ -263,7 +267,7 @@
                 </div>
                 <div class="plan-card glass-effect reveal" style="transition-delay: 0.1s;">
                     <h3>Plan Mayorista</h3>
-                    <div class="precio">$210.000 <small>+ IVA</small></div>
+                    <div class="precio">Consultar<small></small></div>
                     <p>Pago único o consultar financiación</p>
                     <ul>
                         <li>✅ Todo lo del plan E-commerce</li>
@@ -281,12 +285,12 @@
                 <div class="app-options">
                     <div class="app-option glass-effect">
                         <h4>Compra única</h4>
-                        <div class="app-price">Desde $350.000</div>
+                        <div class="app-price">Pedir info</div>
                         <p>Aplicación a medida, código fuente propio, sin cuotas mensuales obligatorias (solo hosting y soporte opcional).</p>
                     </div>
                     <div class="app-option glass-effect">
                         <h4>Alquiler mensual</h4>
-                        <div class="app-price">Desde $45.000/mes</div>
+                        <div class="app-price">Pedir info</div>
                         <p>Ideal para empezar sin gran inversión inicial. Incluye mantenimiento, actualizaciones y soporte técnico.</p>
                     </div>
                 </div>
@@ -298,75 +302,38 @@
     <!-- ESTRATEGIAS -->
     <section id="estrategias" class="estrategias">
         <div class="container">
-            <h2 class="section-title gradient-move">🚀 Estrategias 2025 para vender más</h2>
+            <h2 class="section-title gradient-move">🚀 Estrategias 2026 para vender más</h2>
             <p class="section-subtitle">Implementá las tendencias que ya están usando los comercios que crecen.</p>
             <div class="estrategias-grid">
                 <div class="estrategia-card glass-effect reveal">
                     <div class="estrategia-icon"><i class="fas fa-robot"></i></div>
                     <h3>IA para atención al cliente</h3>
                     <p>Respondé consultas 24/7 con chatbots que aprenden de tus productos. Aumentá conversiones mientras dormís.</p>
-                    <button class="btn-estrategia" onclick="alert('Consultá por integración de IA')">Saber más →</button>
+                    <button class="btn-estrategia" onclick="window.location.href='#contacto'">Consultar →</button>
                 </div>
                 <div class="estrategia-card glass-effect reveal" style="transition-delay: 0.1s;">
                     <div class="estrategia-icon"><i class="fab fa-whatsapp"></i></div>
                     <h3>Ventas por WhatsApp con catálogo</h3>
                     <p>Convertí cada chat en una orden. Integramos catálogo, carrito y pagos directamente en WhatsApp.</p>
-                    <button class="btn-estrategia" onclick="alert('Activá ventas por WhatsApp')">Saber más →</button>
+                    <button class="btn-estrategia" onclick="window.location.href='#contacto'">Consultar →</button>
                 </div>
                 <div class="estrategia-card glass-effect reveal" style="transition-delay: 0.2s;">
                     <div class="estrategia-icon"><i class="fas fa-truck-fast"></i></div>
                     <h3>Envíos en el día / same day</h3>
                     <p>Diferenciate en tu zona. Configurá logística rápida y mostrá disponibilidad en tiempo real.</p>
-                    <button class="btn-estrategia" onclick="alert('Optimizá tus envíos')">Saber más →</button>
+                    <button class="btn-estrategia" onclick="window.location.href='#contacto'">Consultar →</button>
                 </div>
                 <div class="estrategia-card glass-effect reveal" style="transition-delay: 0.3s;">
                     <div class="estrategia-icon"><i class="fas fa-cart-shopping"></i></div>
                     <h3>Recuperación de carritos abandonados</h3>
                     <p>Automatizá recordatorios por email o WhatsApp. Recuperá hasta el 30% de las ventas perdidas.</p>
-                    <button class="btn-estrategia" onclick="alert('Recuperá ventas ahora')">Saber más →</button>
+                    <button class="btn-estrategia" onclick="window.location.href='#contacto'">Consultar →</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DEMO CARRITO -->
-    <section id="demo-carrito" class="demo-carrito">
-        <div class="container">
-            <div class="demo-box glass-effect reveal">
-                <h3>🛒 Demo interactiva: Carrito + Stock + Mercado Envíos</h3>
-                <p>Simulador real de cómo funcionará tu tienda online. Probá agregar productos, controlamos el stock y calculamos el envío.</p>
-                <div id="productos-demo">
-                    <div class="producto-item glass-effect" data-id="1" data-nombre="Remera Argentina" data-precio="3500" data-stock="5">
-                        <span>👕 Remera Argentina - $3500 (stock: <span class="stock-display">5</span>)</span>
-                        <button class="btn-agregar">Agregar</button>
-                    </div>
-                    <div class="producto-item glass-effect" data-id="2" data-nombre="Mate Personalizado" data-precio="2800" data-stock="3">
-                        <span>🧉 Mate Personalizado - $2800 (stock: <span class="stock-display">3</span>)</span>
-                        <button class="btn-agregar">Agregar</button>
-                    </div>
-                    <div class="producto-item glass-effect" data-id="3" data-nombre="Alfajores x6" data-precio="1200" data-stock="10">
-                        <span>🍪 Alfajores x6 - $1200 (stock: <span class="stock-display">10</span>)</span>
-                        <button class="btn-agregar">Agregar</button>
-                    </div>
-                </div>
-                <hr>
-                <h4>📍 Tu carrito</h4>
-                <ul id="lista-carrito"></ul>
-                <div id="total-carrito">Total: $0</div>
-                <div style="margin-top: 1rem;">
-                    <label>📦 Calcular envío (Mercado Envíos simulado): </label>
-                    <select id="tipo-envio">
-                        <option value="0">Retiro local (gratis)</option>
-                        <option value="800">CABA y GBA - $800</option>
-                        <option value="1500">Interior - $1500</option>
-                    </select>
-                </div>
-                <div id="total-con-envio">Total con envío: $0</div>
-                <button id="vaciar-carrito">Vaciar carrito</button>
-                <p style="font-size:0.8rem; margin-top:1rem;">✅ Demo frontend – En la versión final se conecta con API de Mercado Envíos y base de datos.</p>
-            </div>
-        </div>
-    </section>
+    <!-- DEMO CARRITO - ELIMINADO COMPLETAMENTE -->
 
     <!-- MARKETING ARGENTINA -->
     <section id="marketing-arg" class="marketing-arg">
@@ -405,21 +372,21 @@
                 </div>
             </div>
             <div class="paquetes glass-effect reveal">
-                <h3>Planes mensuales de marketing (desde $45.000/mes)</h3>
+                <h3>Planes mensuales de marketing </h3>
                 <div class="plan-simple">
                     <h4>Plan Emprendedor</h4>
                     <p>Gestión de redes + anuncios básicos</p>
-                    <span class="precio">$45.000</span>
+                    <span class="precio"> Pedir info</span>
                 </div>
                 <div class="plan-simple">
                     <h4>Plan Negocio Local</h4>
                     <p>Google Ads + SEO local</p>
-                    <span class="precio">$85.000</span>
+                    <span class="precio"> Pedir info</span>
                 </div>
                 <div class="plan-simple">
                     <h4>Plan Ecommerce Pro</h4>
                     <p>Remarketing + multicanal</p>
-                    <span class="precio">$150.000</span>
+                    <span class="precio"> Pedir info</span>
                 </div>
                 <p class="aviso">*Precios orientativos, consultar por proyectos personalizados.</p>
             </div>
@@ -487,7 +454,7 @@
                             <p>+54 11 2345-6789</p>
                         </div>
                         <div class="contact-item"><i class="fas fa-envelope"></i>
-                            <p>info@techsoluciones.com</p>
+                            <p>info@lsnexodigital.com</p>
                         </div>
                     </div>
                 </div>
@@ -514,7 +481,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>TechSoluciones</h4>
+                    <h4>LS NEXO DIGITAL</h4>
                     <p>Transformamos ideas en soluciones digitales exitosas.</p>
                 </div>
                 <div class="footer-section">
@@ -537,7 +504,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 TechSoluciones. Todos los derechos reservados.</p>
+                <p>&copy; 2026 LS NEXO DIGITAL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
