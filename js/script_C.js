@@ -71,15 +71,20 @@ if (form && service && message && status && whatsapp) {
             '',
             message.value.trim()
         ].join('\n');
-        const url = new URL(whatsapp.href);
+        const contactUrl = new URL(whatsapp.href);
+        const phoneNumber = (contactUrl.searchParams.get('phone') || contactUrl.pathname.replace(/^\//, '')).replace(/[^0-9]/g, '');
+        if (!/^[1-9]\d{6,14}$/.test(phoneNumber)) {
+            status.textContent = 'El número de WhatsApp de contacto no está configurado correctamente.';
+            return;
+        }
+        const url = new URL('https://api.whatsapp.com/send');
+        url.searchParams.set('phone', phoneNumber);
         url.searchParams.set('text', text);
         const fallback = document.createElement('a');
         fallback.href = url.href;
-        fallback.target = '_blank';
-        fallback.rel = 'noopener noreferrer';
         fallback.textContent = 'Abrir consulta en WhatsApp';
         status.replaceChildren('Tu mensaje está preparado. Revisalo y envialo desde WhatsApp. Si no se abrió, ', fallback, '.');
-        window.open(url.href, '_blank', 'noopener,noreferrer');
+        window.location.assign(url.href);
     });
 }
 
