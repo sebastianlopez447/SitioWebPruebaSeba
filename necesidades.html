@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0b1120">
+    <title>Contanos tu proyecto | LS Nexo Digital</title>
+    <link rel="icon" type="image/png" href="img/favicon-32.png">
+    <link rel="stylesheet" href="css/estilos_C.css">
+    <link rel="stylesheet" href="css/necesidades.css">
+    <script src="js/necesidades.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al formulario</a>
+    <header class="header"><div class="navbar container">
+        <a href="index.html" class="logo-link" aria-label="LS Nexo Digital, inicio"><img src="img/logo-nexo-transparent.png" alt="" class="logo-img" width="60" height="60"><span class="logo-text"><span class="brand-name">LS NEXO</span><span class="brand-descriptor">DIGITAL</span></span></a>
+    </div></header>
+    <main id="contenido" class="container brief-page">
+        <div class="brief-intro"><p class="eyebrow">El primer paso de tu proyecto</p><h1>Contanos qué necesitás.<br><span class="accent-text">Démosle forma a tu idea.</span></h1><p>Estas respuestas nos ayudan a entender tu negocio, definir el alcance y preparar una propuesta. No necesitás conocimientos técnicos: contanos con tus palabras.</p><p class="form-help">Los campos con * son obligatorios. Si algo todavía no está definido, podés indicarlo.</p></div>
+        <form id="needs-form" class="contact-form">
+            <fieldset><legend>01 / Tu negocio y contacto</legend>
+                <div class="form-row"><div class="field"><label for="nombre">Nombre y apellido *</label><input id="nombre" name="Nombre" autocomplete="name" required maxlength="100"></div><div class="field"><label for="negocio">Empresa o emprendimiento *</label><input id="negocio" name="Negocio" autocomplete="organization" required maxlength="120"></div></div>
+                <div class="form-row"><div class="field"><label for="email">Email *</label><input type="email" id="email" name="Email" autocomplete="email" required maxlength="160"></div><div class="field"><label for="telefono">Teléfono / WhatsApp</label><input type="tel" id="telefono" name="Teléfono" autocomplete="tel" maxlength="40"></div></div>
+                <div class="field"><label for="actividad">¿A qué se dedica tu negocio y a quiénes se dirige? *</label><textarea id="actividad" name="Actividad y público" required maxlength="1200" rows="3" placeholder="Qué ofrecés, quiénes son tus clientes y en qué zona trabajás."></textarea></div>
+                <div class="field"><label for="actual">Sitio web o redes actuales</label><input id="actual" name="Presencia actual" maxlength="350" placeholder="Enlaces a tu web, Instagram u otras plataformas."></div>
+            </fieldset>
+            <fieldset><legend>02 / Objetivos y alcance</legend>
+                <div class="field"><label for="tipo">¿Qué querés desarrollar? *</label><select id="tipo" name="Tipo de proyecto" required><option value="">Seleccioná una opción</option><option>Sitio web institucional</option><option>Tienda online minorista</option><option>Tienda mayorista</option><option>Aplicación o sistema a medida</option><option>Mejorar una plataforma existente</option><option>Todavía necesito orientación</option></select></div>
+                <div class="field"><label for="objetivo">¿Qué problema querés resolver o qué resultado buscás? *</label><textarea id="objetivo" name="Objetivo principal" required maxlength="1500" rows="3" placeholder="Por ejemplo: recibir pedidos, conseguir consultas o reducir tareas manuales."></textarea></div>
+                <div class="field"><label for="funciones">¿Qué debería poder hacer el cliente o usuario? *</label><textarea id="funciones" name="Funciones necesarias" required maxlength="2000" rows="4" placeholder="Describí el recorrido ideal: consultar un catálogo, comprar, reservar turnos, registrarse, descargar información… Indicá qué es imprescindible y qué puede esperar."></textarea></div>
+                <div class="field"><label for="gestion">¿Qué necesitás administrar y quiénes usarán el sistema?</label><textarea id="gestion" name="Administración y usuarios" maxlength="1200" rows="3" placeholder="Productos, stock, pedidos, clientes, reportes; cantidad de usuarios y permisos. Para tiendas, cantidad aproximada de productos y variantes."></textarea></div>
+                <div class="field"><label for="integraciones">Pagos, envíos e integraciones</label><textarea id="integraciones" name="Integraciones" maxlength="1200" rows="3" placeholder="Medios de pago, zonas de envío, facturación, sistema de gestión u otras herramientas que deban conectarse."></textarea></div>
+            </fieldset>
+            <fieldset><legend>03 / Diseño y materiales</legend>
+                <div class="field"><label for="diseno">¿Cómo te gustaría que se vea? ¿Tenés referencias?</label><textarea id="diseno" name="Diseño y referencias" maxlength="1200" rows="3" placeholder="Estilo, colores, enlaces de referencia y qué te gusta de cada uno."></textarea></div>
+                <div class="field"><label for="materiales">¿Con qué materiales contás?</label><textarea id="materiales" name="Materiales disponibles" maxlength="1000" rows="3" placeholder="Logo, fotos, textos, catálogo, dominio y hosting. Indicá si necesitás ayuda para prepararlos o migrar datos de otro sitio."></textarea></div>
+            </fieldset>
+            <fieldset><legend>04 / Planificación</legend>
+                <div class="form-row"><div class="field"><label for="plazo">¿Cuándo te gustaría lanzarlo?</label><input id="plazo" name="Plazo deseado" maxlength="150" placeholder="Fecha aproximada o sin fecha definida."></div><div class="field"><label for="presupuesto">Presupuesto aproximado</label><input id="presupuesto" name="Presupuesto" maxlength="150" placeholder="Monto y moneda, o a definir."></div></div>
+                <div class="field"><label for="soporte">¿Necesitás mantenimiento, capacitación o marketing?</label><textarea id="soporte" name="Acompañamiento" maxlength="1000" rows="3" placeholder="Quién actualizará el contenido y qué apoyo necesitás después del lanzamiento."></textarea></div>
+                <div class="field"><label for="notas">¿Algo más que debamos saber?</label><textarea id="notas" name="Comentarios adicionales" maxlength="1200" rows="3" placeholder="Restricciones, dudas o requisitos especiales."></textarea></div>
+            </fieldset>
+            <div class="brief-send"><h2>Listo para compartir</h2><p>Elegí cómo enviarnos tus respuestas. Se abrirá tu aplicación para que revises el mensaje y confirmes el envío. Esta página no guarda tus respuestas en un servidor. No incluyas contraseñas ni datos sensibles.</p>
+                <div class="brief-actions"><button type="submit" name="canal" value="whatsapp" class="button primary">Preparar WhatsApp ↗</button><button type="submit" name="canal" value="email" class="button secondary">Preparar email ↗</button></div>
+                <p class="form-help">Para respuestas extensas, podés descargar el resumen y adjuntarlo a un email o a WhatsApp.</p>
+                <button type="button" id="download-summary" class="button secondary">Descargar respuestas (.txt)</button>
+                <p id="send-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+            <noscript><p>Activá JavaScript para preparar tus respuestas o escribinos a <a href="mailto:info@lsnexodigital.com.ar">info@lsnexodigital.com.ar</a>.</p></noscript>
+        </form>
+    </main>
+    <footer class="footer"><div class="container"><p>LS Nexo Digital · Ideas que conectan. Soluciones que acompañan.</p></div></footer>
+</body>
+</html>
