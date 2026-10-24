@@ -5,6 +5,24 @@
 @media(max-width:480px){.container{width:calc(100% - 32px)}.logo-text{font-size:.9rem}.logo-img{width:36px;height:36px}.hero .eyebrow{font-size:.62rem;letter-spacing:.09em}.hero-buttons{flex-direction:column;align-items:stretch}.hero-benefits{font-size:.72rem;gap:8px 14px}.hero h1{font-size:2.65rem}.hero-description{font-size:1rem}.plans-grid,.form-row{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr}.contact-form{padding:22px}.pwa-callout{padding:24px}.preview-top{font-size:.56rem;gap:10px}.store-nav{padding:18px}.store-banner{padding:22px 16px}.store-banner h2{font-size:1.4rem}.banner-orbit{right:-80px}.product-art{height:110px}.preview-bottom{font-size:.52rem}.footer-content,.footer-bottom{flex-direction:column;gap:12px}.footer-bottom{padding-bottom:48px}.whatsapp-float{width:48px;height:48px;bottom:16px;right:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
+/* Agentes de IA: canales de atención. */
+.ai-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.ai-channel { display: flex; align-items: center; gap: 10px; color: var(--blue); font-size: .85rem; font-weight: 650; margin-bottom: 26px; }
+.ai-channel svg { flex-shrink: 0; }
+.ai-setup { margin-top: 28px; padding: 24px 0 0; border-top: 1px solid var(--line); }
+.ai-setup h3 { font-size: 1.1rem; margin-bottom: 12px; }
+.ai-setup p { max-width: 800px; font-size: .9rem; }
+@media(max-width:800px) { .ai-grid { grid-template-columns: 1fr; gap: 18px; } }
+
+/* Redes sociales en el pie de página. */
+.footer-connect { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+.social-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.social-link { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; color: var(--text); font-size: .85rem; background: var(--surface); }
+.social-link svg { flex-shrink: 0; }
+.social-link:hover { color: #a8c9ff; border-color: #526c90; background: #18263c; }
+.social-link:focus-visible { outline: 3px solid #a8c9ff; outline-offset: 3px; }
+@media(max-width:480px) { .footer-connect { align-items: flex-start; margin-top: 8px; } }
+
 /* Identidad visual y navegación entre secciones */
 .accent-text { color: var(--blue); }
 .hero { position: relative; isolation: isolate; }
@@ -101,8 +119,10 @@
 
 /* Menú compacto y centrado junto a la marca. */
 @media(min-width:801px) {
-    .nav-menu { justify-content: center; gap: clamp(20px, 2.3vw, 32px); }
+    .nav-menu { justify-content: center; gap: clamp(14px, 1.7vw, 24px); }
+    .nav-link { white-space: nowrap; }
 }
 @media(max-width:1050px) and (min-width:801px) {
-    .nav-menu { gap: 16px; }
+    .nav-menu { gap: 12px; }
+    .navbar { gap: 18px; }
 }
