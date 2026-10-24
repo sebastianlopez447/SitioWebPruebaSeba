@@ -197,6 +197,7 @@
 .service-card .text-link:hover {
     background: #25436c;
     border-color: #8cb7ff;
+    text-decoration: none;
 }
 .service-card .text-link span { flex-shrink: 0; }
 .plan-card .button {
