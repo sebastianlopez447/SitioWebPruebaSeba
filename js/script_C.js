@@ -42,11 +42,12 @@ if (form && service && message && status && whatsapp) {
     const demoMessages = {
         deposito: 'Hola, vi la demo de gestión de depósito StockFlow y me gustaría consultar por un sistema a medida para mi negocio.',
         muebles: 'Hola, vi la demo para mueblerías Atelier Nogal y me gustaría consultar por un sistema a medida para mi negocio.',
+        'lili-botanica': 'Hola, vi la demo de cosméticos Lili Botánica y me gustaría consultar por una tienda online para mi negocio.',
         tienda: 'Hola, vi la demo de tienda online con agente de IA y me gustaría consultar por una tienda para mi negocio.'
     };
     const selectedDemo = new URLSearchParams(window.location.search).get('demo');
     if (Object.hasOwn(demoMessages, selectedDemo)) {
-        service.value = selectedDemo === 'tienda' ? 'ecommerce' : 'app';
+        service.value = ['tienda', 'lili-botanica'].includes(selectedDemo) ? 'ecommerce' : 'app';
         if (!message.value.trim()) message.value = demoMessages[selectedDemo];
     }
     document.querySelectorAll('[data-service], [data-plan]').forEach(link => {

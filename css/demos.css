@@ -12,3 +12,5 @@
 @media(max-width:1050px) and (min-width:801px){.nav-menu{gap:10px}.nav-link{font-size:.76rem}}
 @media(max-width:800px){.demo-feature,.demo-hero{grid-template-columns:1fr;gap:28px}.demo-feature{padding:24px}.demo-tour{grid-template-columns:1fr}.demo-contact{flex-direction:column;align-items:flex-start}.demo-hero{padding-bottom:40px}.demo-breadcrumb{margin-bottom:24px}}
 @media(max-width:480px){.demo-modules{grid-template-columns:1fr}.demo-detail-header .logo-text .brand-name{font-size:1.1rem}.demo-detail-header .logo-img{width:36px;height:36px}.demo-detail-header .navbar{gap:12px}.demo-feature{padding:20px}.demo-actions .button{width:100%}}
+
+.demo-feature-botanica{background:linear-gradient(135deg,#20372f,#121e29)}

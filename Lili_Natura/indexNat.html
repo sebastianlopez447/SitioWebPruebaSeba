@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lili Botánica: tienda de demostración de cosmética natural elaborada en Buenos Aires. Sitio de ejemplo con datos ficticios.">
+    <meta name="robots" content="noindex">
+    <title>Lili Botánica | Cosmética natural local (demo)</title>
+    <link rel="stylesheet" href="stiloNat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Lili <strong>Botánica</strong></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+
+                <!-- DROPDOWN PRODUCTOS -->
+                <li class="nav-dropdown">
+                    <a href="#productos" class="dropdown-toggle">
+                        Productos <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <!-- Se genera con JS -->
+                    </div>
+                </li>
+
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="demo-badge"><i class="fas fa-flask"></i> Tienda de demostración · Datos ficticios</span>
+            <h1>Cosmética <span>natural</span>, hecha cerca tuyo</h1>
+            <p>Cremas, fragancias, maquillaje y cuidado capilar elaborados en pequeños lotes por productores de Buenos Aires. Ingredientes simples, sin crueldad animal.</p>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn btn-primary">Ver productos</a>
+                <a href="#contacto" class="btn btn-secondary">Escribinos</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600" alt="Cremas y frascos de cosmética natural">
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTOS ===== -->
+    <section id="productos" class="productos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros productos</h2>
+                <p>Explorá las categorías y encontrá lo que necesitás</p>
+            </div>
+
+            <!-- BUSCADOR -->
+            <div class="buscador-wrapper">
+                <div class="buscador">
+                    <i class="fas fa-search buscador-icon"></i>
+                    <input type="text" id="buscadorInput" class="buscador-input" placeholder="Buscar por nombre, ingrediente o categoría..." autocomplete="off">
+                    <button type="button" class="buscador-clear" id="buscadorClear" aria-label="Limpiar búsqueda">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="buscador-sugerencias" id="buscadorSugerencias"></div>
+            </div>
+
+            <!-- CATEGORÍAS PRINCIPALES -->
+            <div class="categorias-principales" id="categoriasPrincipales"></div>
+
+            <!-- SUBCATEGORÍAS -->
+            <div class="subcategorias" id="subcategorias"></div>
+
+            <!-- INFO RESULTADOS -->
+            <div class="resultados-info" id="resultadosInfo"></div>
+
+            <!-- GRID PRODUCTOS -->
+            <div class="productos-grid" id="productosGrid"></div>
+
+            <!-- SIN RESULTADOS -->
+            <div class="sin-resultados" id="sinResultados" style="display:none;">
+                <i class="fas fa-search"></i>
+                <p>No se encontraron productos con esos criterios.</p>
+                <button type="button" class="btn btn-secondary btn-limpiar" id="btnLimpiarFiltros">
+                    Limpiar filtros
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALERÍA ===== -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galería</h2>
+                <p>Los favoritos de nuestra clientela del barrio</p>
+            </div>
+            <div class="galeria-grid">
+                <div class="galeria-item"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500" alt="Producto 1"></div>
+                <div class="galeria-item"><img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=500" alt="Producto 2"></div>
+                <div class="galeria-item"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500" alt="Producto 3"></div>
+                <div class="galeria-item"><img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=500" alt="Producto 4"></div>
+                <div class="galeria-item"><img src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=500" alt="Producto 5"></div>
+                <div class="galeria-item"><img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=500" alt="Producto 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOSOTROS ===== -->
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <h2>Sobre Lili Botánica</h2>
+                    <p>Somos una tienda de barrio que reúne cosmética natural de emprendedores y laboratorios artesanales de Buenos Aires. Elegimos cada producto por sus ingredientes, su elaboración responsable y su origen local.</p>
+                    <ul class="beneficios">
+                        <li><i class="fas fa-check-circle"></i> Elaboración artesanal en pequeños lotes</li>
+                        <li><i class="fas fa-check-circle"></i> Sin testeo en animales</li>
+                        <li><i class="fas fa-check-circle"></i> Retiro en el local o envío en el día (CABA)</li>
+                        <li><i class="fas fa-check-circle"></i> Asesoramiento personalizado</li>
+                    </ul>
+                </div>
+                <div class="nosotros-image">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500" alt="Sobre nosotros">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contacto</h2>
+                <p>¿Tenés alguna consulta? ¡Escribinos!</p>
+            </div>
+            <div class="contacto-content">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefono" placeholder="Tu teléfono">
+                    </div>
+                    <div class="form-group">
+                        <select id="categoriaForm">
+                            <option value="">Categoría de interés</option>
+                            <option value="cremas">Cremas</option>
+                            <option value="perfumes">Perfumes</option>
+                            <option value="maquillaje">Maquillaje</option>
+                            <option value="cabello">Cabello</option>
+                            <option value="cuidado">Cuidado personal</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    <p class="demo-note">Formulario de demostración: los datos no se envían ni se guardan.</p>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+54 9 11 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hola@lilibotanica.example</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Local</h4>
+                            <p>Villa Crespo, Buenos Aires</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lun - Sáb: 9:00 - 20:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>Lili <strong>Botánica</strong></span>
+                    </div>
+                    <p>Cosmética natural de productores locales, a la vuelta de tu casa.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Lili Botánica es una tienda ficticia: productos, precios y datos de contacto son de ejemplo.</p>
+                <p class="demo-origin">Demo de <a href="../index.html#demos">LS Nexo Digital</a> &copy; 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOTANTE ===== -->
+    <a href="#contacto" class="whatsapp-float" aria-label="Explorar contacto de demostración">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== MODAL PRODUCTO ===== -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImg" src="" alt="">
+            <div class="modal-info">
+                <div class="modal-breadcrumb" id="modalBreadcrumb"></div>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+                <p class="modal-precio" id="modalPrecio"></p>
+                <a href="#" id="modalWsp" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Explorar contacto (demo)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptNat.js"></script>
+</body>
+
+</html>
