@@ -29,6 +29,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="stylesheet" href="css/estilos_C.css">
+    <link rel="stylesheet" href="css/demos.css">
     <script src="js/script_C.js" defer></script>
 </head>
 <body>
@@ -42,6 +43,7 @@
             <button class="hamburger" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú"><span></span><span></span><span></span></button>
             <ul class="nav-menu" id="menu-principal">
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#demos" class="nav-link">Demos</a></li>
                 <li><a href="#marketing" class="nav-link">Marketing</a></li>
                 <li><a href="#agentes-ia" class="nav-link">Agentes IA</a></li>
                 <li><a href="#planes" class="nav-link">Planes</a></li>
@@ -75,10 +77,25 @@
             <div class="section-heading"><div><p class="eyebrow">Qué podemos hacer por vos</p><h2 id="services-title">Una solución para<br>cada etapa de tu negocio.</h2></div><p>Desde tu primera presencia online hasta una plataforma a medida. Elegimos las herramientas según lo que necesitás.</p></div>
             <div class="service-grid">
                 <article class="service-card"><span class="card-icon" aria-hidden="true">01 /</span><h3>Webs y tiendas online</h3><p>Diseño, desarrollo y una experiencia de compra clara. Un espacio propio que representa tu marca y facilita cada pedido.</p><ul class="feature-list"><li>Integración de agentes de IA para responder consultas</li><li>Productos, stock y carrito de compras</li><li>Integración de pagos y envíos</li></ul><a href="#planes" class="text-link">Explorar planes <span aria-hidden="true">↗</span></a></article>
-                <article class="service-card"><span class="card-icon" aria-hidden="true">02 /</span><h3>Apps y sistemas</h3><p>Software pensado para tus procesos. Organizá información, conectá herramientas y reducí tareas manuales.</p><ul class="feature-list"><li>Aplicaciones web y móviles</li><li>Automatización de tareas</li><li>Conexión con tus herramientas</li></ul><a href="#contacto" class="text-link" data-service="app">Consultar una solución <span aria-hidden="true">↗</span></a></article>
+                <article class="service-card"><span class="card-icon" aria-hidden="true">02 /</span><h3>Apps y sistemas</h3><p>Software pensado para tus procesos. Organizá información, conectá herramientas y reducí tareas manuales.</p><ul class="feature-list"><li>Aplicaciones web y móviles</li><li>Automatización de tareas</li><li>Conexión con tus herramientas</li></ul><a href="#contacto" class="text-link" data-service="app">Consultar una solución <span aria-hidden="true">↗</span></a><a href="demos/deposito.html" class="text-link">Ver demo de depósito <span aria-hidden="true">↗</span></a></article>
                 <article class="service-card"><span class="card-icon" aria-hidden="true">03 /</span><h3>Marketing digital</h3><p>Una estrategia que conecta tu marca con las personas adecuadas, desde el primer anuncio hasta la consulta.</p><ul class="feature-list"><li>Campañas en Google y redes sociales</li><li>Contenido y gestión de redes</li><li>Posicionamiento y análisis de resultados</li></ul><a href="#marketing" class="text-link">Conocer el enfoque <span aria-hidden="true">↗</span></a></article>
             </div>
             <aside class="pwa-callout"><div><span class="eyebrow">Tu tienda, más cerca</span><h3>También puede vivir en la pantalla de inicio.</h3><p>Una aplicación web permite que tus clientes accedan desde un enlace y, en dispositivos compatibles, la agreguen a su celular sin pasar por una tienda de apps.</p></div><a href="#contacto" class="button secondary" data-service="pwa">Quiero saber más <span aria-hidden="true">↗</span></a></aside>
+        </section>
+        <section id="demos" class="section container" aria-labelledby="demos-title">
+            <div class="section-heading"><div><p class="eyebrow">Del concepto a la experiencia</p><h2 id="demos-title">Soluciones que<br>podés probar.</h2></div><p>Explorá ejemplos interactivos de lo que podemos desarrollar para tu negocio: sistemas a medida y una tienda online con agente de IA.</p></div>
+            <article class="demo-feature">
+                <div><span class="demo-badge">Demo interactiva</span><h3>Tu depósito,<br>mejor organizado.</h3><p>Conocé StockFlow: un prototipo de gestión de depósito para explorar cómo organizar mercadería, controlar existencias y seguir cada pedido hasta su despacho.</p><div class="demo-tags"><span>Inventario</span><span>Pedidos</span><span>Logística</span></div><a class="button primary" href="demos/deposito.html">Conocer la demo <span aria-hidden="true">↗</span></a></div>
+                <figure class="demo-window"><figcaption>StockFlow · Gestión de depósito</figcaption><img src="img/stockflow-preview.svg" alt="Vista ilustrativa del panel de StockFlow con indicadores, pedidos y ubicaciones" width="960" height="650" loading="lazy"><p>Vista ilustrativa · Explorá el sistema en la demo.</p></figure>
+            </article>
+            <article class="demo-feature demo-feature-muebles">
+                <div><span class="demo-badge">Demo interactiva</span><h3>Del showroom al taller,<br>todo conectado.</h3><p>Conocé Atelier Nogal: un prototipo para mueblerías que permite personalizar muebles, preparar presupuestos y seguir cada venta hasta su fabricación y entrega.</p><div class="demo-tags"><span>Muebles a medida</span><span>Presupuestos</span><span>Producción</span></div><a class="button primary" href="demos/muebles.html">Conocer la demo <span aria-hidden="true">↗</span></a></div>
+                <figure class="demo-window"><figcaption>Atelier Nogal · Gestión de muebles a medida</figcaption><img src="img/muebles-preview.svg" alt="Vista ilustrativa de un configurador de muebles con materiales y etapas de producción" width="960" height="650" loading="lazy"><p>Vista ilustrativa · Explorá el sistema en la demo.</p></figure>
+            </article>
+            <article class="demo-feature demo-feature-tienda">
+                <div><span class="demo-badge">Tienda de prueba · Agente de IA</span><h3>Tu tienda online,<br>con ayuda para elegir.</h3><p>Explorá una tienda de ejemplo para almacenes y fiambrerías. Un catálogo con opciones de compra y un agente integrado que responde sobre los productos cargados.</p><div class="demo-tags"><span>Tienda online</span><span>Catálogo de productos</span><span>Agente de IA</span></div><a class="button primary" href="demos/tienda.html">Conocer la demo <span aria-hidden="true">↗</span></a></div>
+                <figure class="demo-window"><figcaption>Fiambrería SuLugar · Tienda online de ejemplo</figcaption><img class="demo-store-image" src="img/tienda-preview.png" alt="Captura de la tienda de prueba con catálogo de fiambres, quesos y panificados" width="1366" height="2643" loading="lazy"><p>Captura de la tienda · Catálogo y agente integrado.</p></figure>
+            </article>
         </section>
         <section id="marketing" class="section section-tinted" aria-labelledby="marketing-title">
             <div class="container">
@@ -151,6 +168,7 @@
     <nav class="section-nav" aria-label="Ir a una sección">
         <a href="#inicio" class="section-dot" aria-label="Inicio" aria-current="location"><span class="dot-label">Inicio</span><span class="dot-mark" aria-hidden="true"></span></a>
         <a href="#servicios" class="section-dot" aria-label="Servicios"><span class="dot-label">Servicios</span><span class="dot-mark" aria-hidden="true"></span></a>
+        <a href="#demos" class="section-dot" aria-label="Demos"><span class="dot-label">Demos</span><span class="dot-mark" aria-hidden="true"></span></a>
         <a href="#marketing" class="section-dot" aria-label="Marketing"><span class="dot-label">Marketing</span><span class="dot-mark" aria-hidden="true"></span></a>
         <a href="#agentes-ia" class="section-dot" aria-label="Agentes de IA"><span class="dot-label">Agentes de IA</span><span class="dot-mark" aria-hidden="true"></span></a>
         <a href="#planes" class="section-dot" aria-label="Planes"><span class="dot-label">Planes</span><span class="dot-mark" aria-hidden="true"></span></a>
