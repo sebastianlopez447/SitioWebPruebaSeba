@@ -20,6 +20,8 @@ Después abrí <http://localhost:8765>. También sirve `npx serve .` u otro serv
 
 > Si no hay conexión a internet, la app funciona igual: solo usa una tipografía del sistema en lugar de Google Fonts.
 
+El catálogo incluye fotos locales de referencia en `assets/furniture/`, con sus fuentes en `sources.json`. Son referencias visuales del prototipo; los acabados y medidas elegidos no modifican la foto. Las imágenes cargadas por el usuario se conservan, y los datos y respaldos antiguos muestran las fotos en lugar de las ilustraciones.
+
 ## Módulos
 
 | Módulo | Qué podés hacer |

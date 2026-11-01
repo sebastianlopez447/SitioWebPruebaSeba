@@ -201,12 +201,26 @@ function furnitureArt(kind, hex) {
   return uri;
 }
 
-// Las imágenes de los productos demo se guardan como "art:<tipo>:<color>" para no ocupar espacio.
+// Fotos locales de referencia. También resuelve las ilustraciones de respaldos anteriores.
+const FURNITURE_PHOTOS = {
+  table: 'assets/furniture/table.jpg',
+  rack: 'assets/furniture/rack.jpg',
+  wardrobe: 'assets/furniture/wardrobe.webp',
+  shelf: 'assets/furniture/shelf.jpg',
+  bed: 'assets/furniture/bed.jpg',
+  desk: 'assets/furniture/desk.jpg',
+  sideboard: 'assets/furniture/sideboard.jpg',
+  coffee: 'assets/furniture/coffee.jpg',
+  nightstand: 'assets/furniture/nightstand.jpg',
+  kitchen: 'assets/furniture/kitchen.jpg',
+  walkin: 'assets/furniture/walkin.jpg',
+  bench: 'assets/furniture/bench.jpg',
+};
 function imgSrc(token, colorId) {
   if (!token) return furnitureArt('shelf', '#d6b48a');
   if (token.startsWith('art:')) {
     const [, kind, col] = token.split(':');
-    return furnitureArt(kind, (COL(colorId) || COL(col) || COLORS[0]).hex);
+    return FURNITURE_PHOTOS[kind] || furnitureArt(kind, (COL(colorId) || COL(col) || COLORS[0]).hex);
   }
   return token;
 }
@@ -330,7 +344,7 @@ function buildSeed() {
   data.products = PRODUCT_SEED.map((p, i) => ({
     id: 'p' + (i + 1), code: p.code, name: p.name, category: p.category, description: p.description,
     dims: { ...p.dims }, basePrice: p.basePrice, materials: sortMaterials(p.materials), colors: p.colors.slice(),
-    images: [`art:${p.art}:${p.colors[0]}`], featured: !!p.featured, createdAt: addDays(T, -330 + i * 5),
+    images: [FURNITURE_PHOTOS[p.art]], featured: !!p.featured, createdAt: addDays(T, -330 + i * 5),
   }));
   data.clients = CLIENT_SEED.map((c, i) => ({
     id: 'c' + (i + 1), name: c[0], phone: c[1], email: c[2], address: c[3], city: c[4], notes: c[5], createdAt: addDays(T, -300 + i * 7),
