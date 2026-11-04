@@ -63,7 +63,13 @@
 .back-to-top:hover { background: #243957; }
 .top-label { position: absolute; right: 56px; border: 1px solid #405877; background: #18263c; padding: 5px 10px; white-space: nowrap; border-radius: 7px; font-size: .75rem; opacity: 0; visibility: hidden; pointer-events: none; }
 .back-to-top:hover .top-label, .back-to-top:focus-visible .top-label { opacity: 1; visibility: visible; }
-@media(min-width:1100px) { .section-nav { display: flex; position: fixed; right: 14px; top: 50%; transform: translateY(-50%); flex-direction: column; padding: 8px 0; border: 1px solid #34445e; border-radius: 30px; background: #0d182bea; backdrop-filter: blur(12px); z-index: 26; } .container { width: min(1160px, calc(100% - 144px)); } }
+/* Reservar espacio para el encabezado y los botones flotantes. */
+@media(min-width:1100px) {
+    .section-nav { display: flex; position: fixed; right: 14px; top: 100px; bottom: 148px; height: max-content; max-height: calc(100% - 248px); margin-block: auto; flex-direction: column; padding: 8px 0; border: 1px solid #34445e; border-radius: 30px; background: #0d182bea; backdrop-filter: blur(12px); z-index: 26; }
+    .section-dot { flex-shrink: 1; min-height: 24px; }
+    .container { width: min(1160px, calc(100% - 144px)); }
+}
+@media(min-width:1100px) and (max-height:480px) { .section-nav { display: none; } }
 @media(max-width:1050px) and (min-width:801px) { .nav-menu { gap: 12px; } .nav-link { font-size: .8rem; } .navbar { gap: 14px; } }
 @media(max-width:800px) { .marketing-grid { grid-template-columns: 1fr; gap: 10px; } .marketing-step h3 { max-width: none; } .marketing-step { padding-block: 24px; } .marketing-footer { flex-direction: column; align-items: flex-start; } .faq-block { grid-template-columns: 1fr; gap: 24px; margin-top: 44px; } }
 @media(max-width:480px) { .back-to-top { right: 17px; bottom: 78px; } .field label { font-size: .88rem; } .feature-list { font-size: .9rem; } }
